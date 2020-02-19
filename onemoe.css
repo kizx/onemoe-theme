@@ -1,0 +1,247 @@
+body {
+  font: 400 1em Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  margin: auto;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f5fa;
+}
+body a.login,
+body li.operate {
+  color: #339999;
+  position: relative;
+  list-style: none;
+  width: 50px;
+}
+body a.login ion-icon,
+body li.operate ion-icon {
+  vertical-align: middle;
+}
+body a.login ul,
+body li.operate ul {
+  list-style-type: none;
+  display: none;
+}
+body a.login ul li,
+body li.operate ul li {
+  padding: 5px 5px;
+  background-color: #ddd;
+  z-index: 999;
+}
+body li.operate:hover ul {
+  display: flex;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+body div[style="padding:1px"] {
+  height: 40px;
+}
+body div.operatediv {
+  position: fixed;
+  background-color: #ddd;
+  border: solid 1px blueviolet;
+  box-shadow: 0 0 10px blueviolet;
+  border-radius: 10px;
+}
+body div.operatediv div {
+  display: flex;
+}
+body div.operatediv div a.operatediv_close {
+  width: 20%;
+  border: solid 1px blueviolet;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  font-size: large;
+  margin: auto 20px;
+}
+body div.operatediv div a.operatediv_close:hover {
+  background-color: rgba(137, 43, 226, 0.5);
+  cursor: pointer;
+}
+body div.operatediv div center {
+  width: 70%;
+}
+body div.mask {
+  display: none;
+}
+body h1.title {
+  margin: auto;
+}
+body h1.title a {
+  font-family: Cursive;
+  text-decoration: none;
+  color: #3290e7;
+  text-shadow: 2px 2px 3px #ccccff;
+}
+body h1.title a:hover {
+  text-shadow: none;
+}
+body select.changelanguage {
+  display: none;
+}
+body div.list-wrapper#head-div div.list-header-container {
+  margin-top: 20px;
+}
+body div.list-wrapper#head-div div.list-header-container div.readme svg,
+body div.list-wrapper#head-div div.list-header-container div.readme span {
+  display: none;
+}
+body div.list-wrapper#head-div div.list-header-container div.readme p {
+  font-size: large;
+  padding: 0 20px;
+}
+body div.list-wrapper#list-div {
+  border-radius: 5px;
+  border: solid 5px rgba(137, 43, 226, 0.2);
+  background-color: #cccccc36;
+  margin-top: 40px;
+}
+body div.list-wrapper#list-div div.list-header-container {
+  height: 40px;
+  border-radius: 0;
+  border-bottom: dashed 1px rgba(59, 66, 107, 0.2);
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+}
+body div.list-wrapper#list-div div.list-header-container a.back-link {
+  margin-left: 20px;
+}
+body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon {
+  color: #339999;
+  width: 25px;
+  height: 25px;
+}
+body div.list-wrapper#list-div div.list-header-container h3.table-header,
+body div.list-wrapper#list-div div.list-header-container h3.table-header a {
+  color: #339999;
+  margin-left: 20px;
+  font-style: italic;
+}
+body div.list-wrapper#list-div div.list-header-container h3.table-header a {
+  margin-left: 0;
+  text-decoration: none;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table {
+  margin: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
+  width: 96%;
+  background-color: #fff;
+  margin: 4px 0;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th {
+  height: 3em;
+  margin: 0 5px;
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li {
+  list-style: none;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td a,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th a {
+  max-width: 60%;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th {
+  height: 2em;
+  font-weight: bold;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type {
+  width: 50%;
+  margin-left: 10px;
+  float: left;
+  justify-content: flex-start;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a {
+  color: #333;
+  margin-left: 5px;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:nth-of-type(2),
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:nth-of-type(2) {
+  width: 30%;
+  float: right;
+  justify-content: flex-end;
+  text-align: right;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:last-of-type,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:last-of-type {
+  width: 20%;
+  margin-right: 10px;
+  float: right;
+  justify-content: flex-end;
+  text-align: right;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type):hover {
+  background-color: #ccffcc8c;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type {
+  border: none;
+  background-color: #cccccc00;
+}
+body div.list-wrapper#list-div div.list-body-container div#upload_div center {
+  margin-top: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body div.list-wrapper#list-div div.list-body-container div#upload_div center input {
+  vertical-align: middle;
+  height: 25px;
+  min-width: 50px;
+  border: dotted 1px dimgrey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: gainsboro;
+}
+body div.list-wrapper#list-div div.list-body-container div#upload_div center input:hover {
+  color: #339999;
+  box-shadow: 0 0 10px cornflowerblue;
+}
+body div.list-wrapper#list-div:hover {
+  box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
+}
+body div.list-wrapper:nth-of-type(4) {
+  width: 100%;
+  margin: 50px auto 50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: solid 5px rgba(137, 43, 226, 0.2);
+}
+body div.list-wrapper:nth-of-type(4) div.readme {
+  background-color: #f2f5fa;
+}
+body div.list-wrapper:nth-of-type(4) div.readme svg,
+body div.list-wrapper:nth-of-type(4) div.readme span {
+  display: none;
+}
+body div.list-wrapper:nth-of-type(4) div.readme div.markdown-body {
+  margin: 10px 25px;
+}
+body div.list-wrapper:nth-of-type(4):hover {
+  box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
+}
