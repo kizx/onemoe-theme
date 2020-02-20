@@ -275,21 +275,21 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
 body div.list-wrapper#list-div:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
 }
-body div.list-wrapper:nth-last-of-type(3) {
+body div.onemoe-readme {
   width: 100%;
   margin: 50px auto 50px;
   box-sizing: border-box;
   border-radius: 3px;
   border: solid 5px rgba(137, 43, 226, 0.2);
 }
-body div.list-wrapper:nth-last-of-type(3) div.readme {
+body div.onemoe-readme div.readme {
   background-color: #f2f5fa;
 }
-body div.list-wrapper:nth-last-of-type(3) div.readme svg,
-body div.list-wrapper:nth-last-of-type(3) div.readme span {
+body div.onemoe-readme div.readme svg,
+body div.onemoe-readme div.readme span {
   display: none;
 }
-body div.list-wrapper:nth-last-of-type(3) div.readme div.markdown-body {
+body div.onemoe-readme div.readme div.markdown-body {
   margin: 10px 25px;
 }
 body div.list-wrapper:nth-of-type(4):hover {

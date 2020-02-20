@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?php echo $n_path;?>,<?php if ($p_path!='') echo $p_path.','; echo $_SERVER['sitename'];?>,OneManager,auth_by_逸笙">
     <link rel="icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://files.catbox.moe/rwt6kc.css" type="text/css">
+    <link rel="stylesheet" href="https://files.catbox.moe/sglat1.css" type="text/css">
 </head>
 
 <body>
@@ -325,7 +325,7 @@
             </div>
         </div>
     </div>
-    <div class="list-wrapper">
+    <div class="list-wrapper onemoe-readme">
         <div class="list-container">
             <div class="list-header-container">
                 <div class="readme">
