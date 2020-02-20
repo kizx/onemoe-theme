@@ -12,6 +12,7 @@ body li.operate {
   position: relative;
   list-style: none;
   width: 50px;
+  height: 30px;
 }
 body a.login ion-icon,
 body li.operate ion-icon {
@@ -21,18 +22,40 @@ body a.login ul,
 body li.operate ul {
   list-style-type: none;
   display: none;
+  position: absolute;
+  top: -15px;
+  left: 10px;
 }
 body a.login ul li,
 body li.operate ul li {
-  padding: 5px 5px;
-  background-color: #ddd;
+  display: flex;
+  margin: auto;
+  padding: 2px 2px;
+  box-sizing: border-box;
   z-index: 999;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+  border: solid 1px yellowgreen;
 }
+body a.login ul li a,
+body li.operate ul li a {
+  width: 50px;
+}
+body a.login ul li a[href="?RefreshCache"],
+body li.operate ul li a[href="?RefreshCache"] {
+  width: 80px;
+}
+body a.login ul li a:hover,
+body li.operate ul li a:hover {
+  cursor: pointer;
+}
+body a.login ul li:hover,
+body li.operate ul li:hover {
+  background-color: #fff;
+}
+body a.login,
 body li.operate:hover ul {
   display: flex;
-  position: absolute;
-  top: 3px;
-  left: 5px;
 }
 body div[style="padding:1px"] {
   height: 40px;
@@ -65,6 +88,13 @@ body div.operatediv div center {
 }
 body div.mask {
   display: none;
+}
+body div[style="position:absolute;"] {
+  left: 50px;
+  top: 20px;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px;
 }
 body h1.title {
   margin: auto;
@@ -164,6 +194,22 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   overflow: hidden;
   text-overflow: ellipsis;
 }
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate {
+  display: flex;
+  align-items: center;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li {
+  margin-top: 5px;
+  padding: 5px 5px;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li a,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li a {
+  font-size: 13px;
+  width: 18px;
+  height: 100%;
+}
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th {
   height: 2em;
   font-weight: bold;
@@ -179,6 +225,10 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a {
   color: #333;
   margin-left: 5px;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type > ion-icon,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type > ion-icon {
+  color: #333;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:nth-of-type(2),
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:nth-of-type(2) {
@@ -225,21 +275,21 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
 body div.list-wrapper#list-div:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
 }
-body div.list-wrapper:nth-of-type(4) {
+body div.list-wrapper:nth-last-of-type(3) {
   width: 100%;
   margin: 50px auto 50px;
   box-sizing: border-box;
   border-radius: 3px;
   border: solid 5px rgba(137, 43, 226, 0.2);
 }
-body div.list-wrapper:nth-of-type(4) div.readme {
+body div.list-wrapper:nth-last-of-type(3) div.readme {
   background-color: #f2f5fa;
 }
-body div.list-wrapper:nth-of-type(4) div.readme svg,
-body div.list-wrapper:nth-of-type(4) div.readme span {
+body div.list-wrapper:nth-last-of-type(3) div.readme svg,
+body div.list-wrapper:nth-last-of-type(3) div.readme span {
   display: none;
 }
-body div.list-wrapper:nth-of-type(4) div.readme div.markdown-body {
+body div.list-wrapper:nth-last-of-type(3) div.readme div.markdown-body {
   margin: 10px 25px;
 }
 body div.list-wrapper:nth-of-type(4):hover {
