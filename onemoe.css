@@ -111,6 +111,29 @@ body h1.title a:hover {
 body select.changelanguage {
   display: none;
 }
+body div.onemoe-more-disk {
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+}
+body div.onemoe-more-disk div.more-disk {
+  margin: auto 10px;
+}
+body div.onemoe-more-disk div.more-disk a {
+  text-decoration: none;
+  border: solid 1px #339999;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: auto 0.5em;
+  padding: 5px;
+  box-sizing: border-box;
+  color: #339999;
+}
+body div.onemoe-more-disk div.more-disk a:hover {
+  color: #fff;
+  background-color: #339999;
+  box-shadow: 0 0 5px #339999;
+}
 body div.list-wrapper#head-div div.list-header-container {
   margin-top: 20px;
 }
@@ -126,7 +149,7 @@ body div.list-wrapper#list-div {
   border-radius: 5px;
   border: solid 5px rgba(137, 43, 226, 0.2);
   background-color: #cccccc36;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 body div.list-wrapper#list-div div.list-header-container {
   height: 40px;

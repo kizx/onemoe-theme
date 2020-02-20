@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?php echo $n_path;?>,<?php if ($p_path!='') echo $p_path.','; echo $_SERVER['sitename'];?>,OneManager,auth_by_逸笙">
     <link rel="icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://files.catbox.moe/sglat1.css" type="text/css">
+    <link rel="stylesheet" href="https://files.catbox.moe/a6pq2y.css" type="text/css">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
     </h1>
 <?php $disktags = explode("|",getConfig('disktag'));
     if (count($disktags)>1) { ?>
-    <div class="list-wrapper">
+    <div class="list-wrapper onemoe-more-disk">
         <div class="list-container">
             <div class="list-header-container">
                 <div class="more-disk">
