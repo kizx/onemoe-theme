@@ -1,64 +1,65 @@
+:root {
+  font-size: 10px;
+  font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
 body {
-  font: 400 1em Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  background-color: #f2f5fa;
   margin: auto;
   max-width: 960px;
   display: flex;
   flex-direction: column;
-  background-color: #f2f5fa;
 }
 body a.login,
 body li.operate {
+  font-size: 1.2rem;
   color: #339999;
   position: relative;
   list-style: none;
-  width: 50px;
-  height: 30px;
+  width: 5rem;
 }
 body a.login ion-icon,
 body li.operate ion-icon {
   vertical-align: middle;
 }
+body a.login:hover ul,
+body li.operate:hover ul {
+  display: flex;
+}
 body a.login ul,
 body li.operate ul {
+  width: 2rem;
   list-style-type: none;
   display: none;
   position: absolute;
-  top: -15px;
-  left: 10px;
+  margin-top: 0;
+  top: 0;
 }
 body a.login ul li,
 body li.operate ul li {
   display: flex;
-  margin: auto;
-  padding: 2px 2px;
-  box-sizing: border-box;
-  z-index: 999;
-  border-radius: 5px;
-  background-color: blanchedalmond;
-  border: solid 1px yellowgreen;
-}
-body a.login ul li a,
-body li.operate ul li a {
-  width: 50px;
-}
-body a.login ul li a[href="?RefreshCache"],
-body li.operate ul li a[href="?RefreshCache"] {
-  width: 80px;
-}
-body a.login ul li a:hover,
-body li.operate ul li a:hover {
-  cursor: pointer;
+  padding: 0.2rem;
+  z-index: 99;
+  border-radius: 2px;
+  background-color: papayawhip;
+  border: dashed 1px yellowgreen;
 }
 body a.login ul li:hover,
 body li.operate ul li:hover {
   background-color: #fff;
 }
-body a.login,
-body li.operate:hover ul {
-  display: flex;
+body a.login ul li a,
+body li.operate ul li a {
+  margin-left: 0.8rem;
+  width: 1.7rem;
+  color: #339999;
+  text-decoration: none;
+}
+body a.login ul li a:hover,
+body li.operate ul li a:hover {
+  cursor: pointer;
 }
 body div[style="padding:1px"] {
-  height: 40px;
+  height: 4rem;
 }
 body div.operatediv {
   position: fixed;
@@ -80,7 +81,7 @@ body div.operatediv div a.operatediv_close {
   margin: auto 20px;
 }
 body div.operatediv div a.operatediv_close:hover {
-  background-color: rgba(137, 43, 226, 0.5);
+  background-color: blueviolet;
   cursor: pointer;
 }
 body div.operatediv div center {
@@ -98,12 +99,13 @@ body div[style="position:absolute;"] {
 }
 body h1.title {
   margin: auto;
+  font-size: 3rem;
 }
 body h1.title a {
   font-family: Cursive;
   text-decoration: none;
   color: #3290e7;
-  text-shadow: 2px 2px 3px #ccccff;
+  text-shadow: 2px 2px 5px #ccccff;
 }
 body h1.title a:hover {
   text-shadow: none;
@@ -113,20 +115,16 @@ body select.changelanguage {
 }
 body div.onemoe-more-disk {
   margin: auto;
-  margin-top: 20px;
-  width: 100%;
-}
-body div.onemoe-more-disk div.more-disk {
-  margin: auto 10px;
+  margin-top: 2rem;
 }
 body div.onemoe-more-disk div.more-disk a {
   text-decoration: none;
   border: solid 1px #339999;
   border-radius: 5px;
   font-weight: bold;
-  margin: auto 0.5em;
+  font-size: 1.2rem;
   padding: 5px;
-  box-sizing: border-box;
+  margin: auto 0.5rem;
   color: #339999;
 }
 body div.onemoe-more-disk div.more-disk a:hover {
@@ -135,7 +133,7 @@ body div.onemoe-more-disk div.more-disk a:hover {
   box-shadow: 0 0 5px #339999;
 }
 body div.list-wrapper#head-div div.list-header-container {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 body div.list-wrapper#head-div div.list-header-container div.readme svg,
 body div.list-wrapper#head-div div.list-header-container div.readme span {
@@ -143,149 +141,152 @@ body div.list-wrapper#head-div div.list-header-container div.readme span {
 }
 body div.list-wrapper#head-div div.list-header-container div.readme p {
   font-size: large;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 body div.list-wrapper#list-div {
   border-radius: 5px;
   border: solid 5px rgba(137, 43, 226, 0.2);
-  background-color: #cccccc36;
-  margin-top: 20px;
+  background-color: rgba(204, 204, 204, 0.3);
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
 body div.list-wrapper#list-div div.list-header-container {
-  height: 40px;
-  border-radius: 0;
-  border-bottom: dashed 1px rgba(59, 66, 107, 0.2);
+  border-radius: 2px;
+  border-bottom: dashed 1px rgba(59, 66, 107, 0.3);
   display: flex;
   align-items: center;
   background-color: #eee;
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link {
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon {
   color: #339999;
-  width: 25px;
-  height: 25px;
+  width: 2rem;
+  height: 2rem;
 }
-body div.list-wrapper#list-div div.list-header-container h3.table-header,
-body div.list-wrapper#list-div div.list-header-container h3.table-header a {
+body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon:hover {
+  color: #ff9900;
+}
+body div.list-wrapper#list-div div.list-header-container h3.table-header {
+  font-size: 1.5rem;
+  margin: 1rem;
   color: #339999;
-  margin-left: 20px;
   font-style: italic;
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header a {
-  margin-left: 0;
+  color: #339999;
   text-decoration: none;
+}
+body div.list-wrapper#list-div div.list-header-container h3.table-header a:hover {
+  color: #ff9900;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table {
   margin: auto;
-  box-sizing: border-box;
-  width: 100%;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-width: 100%;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
-  width: 96%;
   background-color: #fff;
-  margin: 4px 0;
+  margin: 1rem 1rem;
   border: solid 1px #ddd;
   border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 6fr 2fr 1fr;
 }
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th {
-  height: 3em;
-  margin: 0 5px;
-  box-sizing: border-box;
-  align-items: center;
-  display: flex;
+@media screen and (max-width: 768px) {
+  body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
+    grid-template-columns: 6fr 1.5fr;
+  }
+  body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:nth-last-of-type(2),
+  body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:nth-last-of-type(2) {
+    display: none;
+  }
 }
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li {
-  list-style: none;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td a,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th a {
-  max-width: 60%;
-  text-decoration: none;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate {
-  display: flex;
-  align-items: center;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li {
-  margin-top: 5px;
-  padding: 5px 5px;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li a,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li a {
-  font-size: 13px;
-  width: 18px;
-  height: 100%;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th {
-  height: 2em;
-  font-weight: bold;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type {
-  width: 50%;
-  margin-left: 10px;
-  float: left;
-  justify-content: flex-start;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a {
-  color: #333;
-  margin-left: 5px;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type > ion-icon,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type > ion-icon {
-  color: #333;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:nth-of-type(2),
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:nth-of-type(2) {
-  width: 30%;
-  float: right;
-  justify-content: flex-end;
-  text-align: right;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:last-of-type,
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:last-of-type {
-  width: 20%;
-  margin-right: 10px;
-  float: right;
-  justify-content: flex-end;
-  text-align: right;
-}
-body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type):hover {
-  background-color: #ccffcc8c;
+@media screen and (orientation: portrait) {
+  body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
+    grid-template-columns: 1fr;
+  }
+  body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:last-of-type,
+  body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:last-of-type {
+    display: none;
+  }
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type {
   border: none;
   background-color: #cccccc00;
 }
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type):hover {
+  background-color: rgba(137, 43, 226, 0.1);
+  box-shadow: 0 0 5px #339999;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td {
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a {
+  color: #333;
+  margin-left: 0.5rem;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a:hover,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a:hover {
+  color: #339999;
+  text-decoration: underline;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type > ion-icon,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type > ion-icon {
+  color: #333;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:nth-of-type(2),
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:nth-of-type(2) {
+  justify-content: flex-end;
+  text-align: right;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:last-of-type,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:last-of-type {
+  justify-content: flex-end;
+  text-align: right;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li {
+  list-style: none;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th a,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td a {
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate {
+  display: flex;
+  align-items: center;
+  margin-right: -2rem;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li {
+  margin-top: 0;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li:hover a,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li:hover a {
+  color: #339999;
+  text-decoration: none;
+}
 body div.list-wrapper#list-div div.list-body-container div#upload_div center {
-  margin-top: 10px;
-  height: 40px;
+  margin-top: 1rem;
+  height: 4rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 body div.list-wrapper#list-div div.list-body-container div#upload_div center input {
   vertical-align: middle;
-  height: 25px;
-  min-width: 50px;
+  height: 2rem;
+  min-width: 5rem;
   border: dotted 1px dimgrey;
   border-radius: 4px;
   box-sizing: border-box;
@@ -294,6 +295,7 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
 body div.list-wrapper#list-div div.list-body-container div#upload_div center input:hover {
   color: #339999;
   box-shadow: 0 0 10px cornflowerblue;
+  cursor: pointer;
 }
 body div.list-wrapper#list-div:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
@@ -301,9 +303,9 @@ body div.list-wrapper#list-div:hover {
 body div.onemoe-readme {
   width: 100%;
   margin: 50px auto 50px;
-  box-sizing: border-box;
   border-radius: 3px;
   border: solid 5px rgba(137, 43, 226, 0.2);
+  box-sizing: border-box;
 }
 body div.onemoe-readme div.readme {
   background-color: #f2f5fa;
@@ -315,6 +317,15 @@ body div.onemoe-readme div.readme span {
 body div.onemoe-readme div.readme div.markdown-body {
   margin: 10px 25px;
 }
-body div.list-wrapper:nth-of-type(4):hover {
+body div.onemoe-readme:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
+}
+body div[style="margin: 12px 4px 4px; text-align: center"] div a {
+  font-size: 1.8rem;
+  color: #339999;
+  text-decoration: none;
+}
+body div[style="margin: 12px 4px 4px; text-align: center"] div a:hover {
+  text-decoration: underline;
+  color: #ff9900;
 }

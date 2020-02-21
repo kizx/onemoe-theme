@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?php echo $n_path;?>,<?php if ($p_path!='') echo $p_path.','; echo $_SERVER['sitename'];?>,OneManager,auth_by_逸笙">
     <link rel="icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://files.catbox.moe/a6pq2y.css" type="text/css">
+    <link rel="stylesheet" href="https://files.catbox.moe/7bnks7.css" type="text/css">
 </head>
 
 <body>
@@ -163,8 +163,8 @@
                 <table class="list-table" id="list-table">
                     <tr id="tr0">
                         <th class="file" onclick="sortby('a');"><?php echo getconstStr('File'); if ($_SERVER['USER']!='qcloud') { ?>&nbsp;&nbsp;&nbsp;<button onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button><?php } ?></th>
-                        <th class="updated_at" width="25%" onclick="sortby('time');"><?php echo getconstStr('EditTime'); ?></th>
-                        <th class="size" width="15%" onclick="sortby('size');"><?php echo getconstStr('Size'); ?></th>
+                        <th class="updated_at" onclick="sortby('time');"><?php echo getconstStr('EditTime'); ?></th>
+                        <th class="size" onclick="sortby('size');"><?php echo getconstStr('Size'); ?></th>
                     </tr>
                     <!-- Dirs -->
 <?php               //echo json_encode($files['children'], JSON_PRETTY_PRINT);
