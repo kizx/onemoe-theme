@@ -242,12 +242,13 @@ body {
               padding: 1rem;
               align-items: center;
               display: flex;
-              white-space: nowrap;
-              overflow: auto;
+
               &:first-of-type {
                 a {
                   color: #333;
                   margin-left: 0.5rem;
+                  white-space: nowrap;
+                  overflow: hidden;
                   &:hover {
                     color: @color-bt;
                     text-decoration: underline;
@@ -279,10 +280,14 @@ body {
                 align-items: center;
                 // margin-right: -2rem;
                 ul {
+                  top: -0.5rem;
                   li {
-                    margin-top: 0;
                     padding: 0.5rem;
                     font-size: 1.3rem;
+                    a {
+                      width: auto;
+                      padding-right: 0.8rem;
+                    }
                     &:hover a {
                       color: @color-bt;
                       text-decoration: none;

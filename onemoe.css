@@ -224,13 +224,13 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   padding: 1rem;
   align-items: center;
   display: flex;
-  white-space: nowrap;
-  overflow: auto;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a {
   color: #333;
   margin-left: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a:hover,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a:hover {
@@ -266,11 +266,19 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   display: flex;
   align-items: center;
 }
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul {
+  top: -0.5rem;
+}
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li {
-  margin-top: 0;
   padding: 0.5rem;
   font-size: 1.3rem;
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li a,
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li a {
+  width: auto;
+  padding-right: 0.8rem;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li:hover a,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li:hover a {
