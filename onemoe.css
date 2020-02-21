@@ -188,14 +188,14 @@ body div.list-wrapper#list-div div.list-body-container table.list-table {
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
   background-color: #fff;
   margin: 1rem;
-  border: solid 1px #f1f0f0;
+  border: solid 1px #ccc;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 6fr 2fr 1fr;
 }
 @media screen and (max-width: 768px) {
   body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
-    grid-template-columns: 6fr 1.5fr;
+    grid-template-columns: 6fr 2fr;
   }
   body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:nth-last-of-type(2),
   body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:nth-last-of-type(2) {
@@ -217,7 +217,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type):hover {
   background-color: rgba(137, 43, 226, 0.1);
-  box-shadow: 0 0 5px #339999;
+  box-shadow: 0 0 2px blueviolet;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td {

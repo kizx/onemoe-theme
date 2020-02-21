@@ -211,12 +211,12 @@ body {
           tr {
             background-color: @color-wjj;
             margin: 1rem;
-            border: solid 1px #f1f0f0;
+            border: solid 1px #ccc;
             border-radius: 5px;
             display: grid;
             grid-template-columns: 6fr 2fr 1fr;
             @media screen and(max-width:768px) {
-              grid-template-columns: 6fr 1.5fr;
+              grid-template-columns: 6fr 2fr;
               th:nth-last-of-type(2),
               td:nth-last-of-type(2) {
                 display: none;
@@ -235,7 +235,7 @@ body {
             }
             &:not(:first-of-type):hover {
               background-color: @color-wjjhv;
-              box-shadow: 0 0 5px @color-bt;
+              box-shadow: 0 0 2px @color-bs;
             }
             th,
             td {
