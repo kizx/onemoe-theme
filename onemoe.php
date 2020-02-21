@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?php echo $n_path;?>,<?php if ($p_path!='') echo $p_path.','; echo $_SERVER['sitename'];?>,OneManager,auth_by_逸笙">
     <link rel="icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://files.catbox.moe/nvj7ia.css" type="text/css">
+    <link rel="stylesheet" href="https://files.catbox.moe/bu6alt.css" type="text/css">
 </head>
 
 <body>

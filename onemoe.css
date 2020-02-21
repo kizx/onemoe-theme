@@ -224,13 +224,13 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   padding: 1rem;
   align-items: center;
   display: flex;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a {
   color: #333;
   margin-left: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a:hover,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a:hover {
