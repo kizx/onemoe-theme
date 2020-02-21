@@ -187,8 +187,8 @@ body div.list-wrapper#list-div div.list-body-container table.list-table {
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
   background-color: #fff;
-  margin: 1rem 1rem;
-  border: solid 1px #ddd;
+  margin: 1rem;
+  border: solid 1px #f1f0f0;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 6fr 2fr 1fr;
@@ -224,6 +224,8 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   padding: 1rem;
   align-items: center;
   display: flex;
+  white-space: nowrap;
+  overflow: auto;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type a,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a {
@@ -263,7 +265,6 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate {
   display: flex;
   align-items: center;
-  margin-right: -2rem;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li {

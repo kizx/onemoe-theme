@@ -210,8 +210,8 @@ body {
         tbody {
           tr {
             background-color: @color-wjj;
-            margin: 1rem 1rem;
-            border: solid 1px #ddd;
+            margin: 1rem;
+            border: solid 1px #f1f0f0;
             border-radius: 5px;
             display: grid;
             grid-template-columns: 6fr 2fr 1fr;
@@ -229,7 +229,6 @@ body {
                 display: none;
               }
             }
-            // transition: 0.1s;
             &:first-of-type {
               border: none;
               background-color: #cccccc00;
@@ -243,13 +242,12 @@ body {
               padding: 1rem;
               align-items: center;
               display: flex;
+              white-space: nowrap;
+              overflow: auto;
               &:first-of-type {
                 a {
                   color: #333;
                   margin-left: 0.5rem;
-                  // overflow: hidden;
-                  // // white-space: nowrap;
-                  // text-overflow: ellipsis;
                   &:hover {
                     color: @color-bt;
                     text-decoration: underline;
@@ -279,7 +277,7 @@ body {
               li.operate {
                 display: flex;
                 align-items: center;
-                margin-right: -2rem;
+                // margin-right: -2rem;
                 ul {
                   li {
                     margin-top: 0;
