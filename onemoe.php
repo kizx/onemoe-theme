@@ -9,7 +9,7 @@
     <meta name="keywords" content="<?php echo $n_path;?>,<?php if ($p_path!='') echo $p_path.','; echo $_SERVER['sitename'];?>,OneManager,auth_by_逸笙">
     <link rel="icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://files.catbox.moe/sx0csz.css" type="text/css">
+    <link rel="stylesheet" href="https://files.catbox.moe/02e67o.css" type="text/css">
 </head>
 
 <body>
@@ -327,10 +327,10 @@
             </div>
         </div>
     </div>
-    <div class="list-wrapper onemoe-readme">
+    <div class="list-wrapper">
         <div class="list-container">
             <div class="list-header-container">
-                <div class="readme">
+                <div class="readme onemoe-readme">
                     <!--<svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
                     <span style="line-height: 16px;vertical-align: top;">'.$readme['name'].'</span>-->
                     <div class="markdown-body" id="readme">
@@ -1089,7 +1089,7 @@
         var td1=document.createElement('td');
         td1.setAttribute('class','file');
         var a1=document.createElement('a');
-        a1.href=html.name.replace(/#/,'%23');
+        a1.href='<?php echo $_SERVER['base_disk_path'];?>'+html.name.replace(/#/,'%23');
         a1.innerText=html.name;
         a1.target='_blank';
         var td2=document.createElement('td');

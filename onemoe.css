@@ -119,6 +119,7 @@ body h1.title a {
 }
 body h1.title a:hover {
   text-shadow: none;
+  font-size: 3.8rem;
 }
 body select.changelanguage {
   display: none;
@@ -145,10 +146,6 @@ body div.onemoe-more-disk div.more-disk a:hover {
 }
 body div.list-wrapper#head-div div.list-header-container {
   margin-top: 2rem;
-}
-body div.list-wrapper#head-div div.list-header-container div.readme svg,
-body div.list-wrapper#head-div div.list-header-container div.readme span {
-  display: none;
 }
 body div.list-wrapper#head-div div.list-header-container div.readme p {
   font-size: large;
@@ -326,17 +323,13 @@ body div.list-wrapper#list-div:hover {
 }
 body div.onemoe-readme {
   width: 100%;
-  margin: 50px auto 0;
+  margin: 4rem auto 0;
   border-radius: 3px;
   border: solid 5px rgba(137, 43, 226, 0.2);
   box-sizing: border-box;
 }
-body div.onemoe-readme div.readme svg,
-body div.onemoe-readme div.readme span {
-  display: none;
-}
-body div.onemoe-readme div.readme div.markdown-body {
-  margin: 10px 25px;
+body div.onemoe-readme div.markdown-body {
+  padding: 1rem;
 }
 body div.onemoe-readme:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
