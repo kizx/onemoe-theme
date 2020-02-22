@@ -14,12 +14,16 @@
 @color-wjjhv: rgba(137, 43, 226, 0.1);
 @color-wjj-bg: rgba(204, 204, 204, 0.3);
 body {
-  background-color: @color-bg;
-  // background-image: linear-gradient(45deg, #d9afd9 0%, #97d9e1 100%);
+  // background-color: @color-bg;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  min-height: 100vh;
   margin: auto;
+  padding: 0 0.5rem;
   max-width: 960px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   // background-color: @color-bg;
   // 管理
   a.login,
@@ -71,27 +75,31 @@ body {
   div.operatediv {
     position: fixed;
     background-color: #ddd;
-    border: solid 1px @color-bs;
-    box-shadow: 0 0 10px @color-bs;
-    border-radius: 10px;
+    border: solid 2px @color-bs;
+    box-shadow: 0 0 10px @color-bt;
+    border-radius: 2px;
     div {
+      color: @color-bt;
+      font-size: 1.5rem;
       display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      input[type="submit"],
       a.operatediv_close {
-        width: 20%;
-        border: solid 1px @color-bs;
-        border-radius: 10px;
-        margin: auto;
+        align-self: flex-end;
+        width: auto;
+        padding: 1px 5px;
+        margin: 5px 0;
+        border: solid 2px @color-bt;
+        border-radius: 2px;
         text-align: center;
-        font-size: large;
-        margin: auto 20px;
-      }
-      a.operatediv_close:hover {
-        background-color: @color-bs;
-        cursor: pointer;
-      }
-      center {
-        width: 70%;
-        // border: solid 1px @color-bs;
+        font-size: 1.5rem;
+        color: @color-bt;
+        &:hover {
+          background-color: @color-bt;
+          cursor: pointer;
+          color: @color-bthv;
+        }
       }
     }
   }
@@ -100,21 +108,21 @@ body {
   }
   // 升级提示
   div[style="position:absolute;"] {
-    left: 50px;
-    top: 20px;
+    top: 2rem;
     background-color: yellow;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 5px;
   }
   // 标题
   h1.title {
     margin: auto;
-    font-size: 3rem;
+    font-size: 3.5rem;
     a {
       font-family: Cursive;
       text-decoration: none;
       color: rgb(50, 144, 231);
-      text-shadow: 2px 2px 5px #ccccff;
+      text-shadow: 2px 2px 5px rgba(50, 144, 231, 0.5);
+      transition: 0.2s;
       &:hover {
         text-shadow: none;
       }
@@ -131,7 +139,7 @@ body {
     div.more-disk {
       a {
         text-decoration: none;
-        border: solid 1px @color-bt;
+        border: solid 2px @color-bt;
         border-radius: 5px;
         font-weight: bold;
         font-size: 1.2rem;
@@ -143,6 +151,7 @@ body {
         color: #fff;
         background-color: @color-bt;
         box-shadow: 0 0 5px @color-bt;
+        transition: 0.2s;
       }
     }
   }
@@ -167,7 +176,7 @@ body {
   div.list-wrapper#list-div {
     border-radius: 5px;
     border: solid 5px rgba(137, 43, 226, 0.2);
-    background-color: @color-wjj-bg;
+    // background-color: @color-wjj-bg;
     margin-top: 2rem;
     font-size: 1.5rem;
     // 文件路径
@@ -176,7 +185,7 @@ body {
       border-bottom: dashed 1px rgba(59, 66, 107, 0.3);
       display: flex;
       align-items: center;
-      background-color: #eee;
+      background-color: #e0c3fc98;
       a.back-link {
         margin-left: 2rem;
         ion-icon {
@@ -209,9 +218,10 @@ body {
         min-width: 100%;
         tbody {
           tr {
+            color: #333;
             background-color: @color-wjj;
             margin: 1rem;
-            border: solid 1px #ccc;
+            border: solid 1px @color-bt;
             border-radius: 5px;
             display: grid;
             grid-template-columns: 6fr 2fr 1fr;
@@ -229,13 +239,18 @@ body {
                 display: none;
               }
             }
+            // 表头
             &:first-of-type {
               border: none;
               background-color: #cccccc00;
+              margin: 0 1.5rem;
+            }
+            &:nth-of-type(2) {
+              margin-top: 0;
             }
             &:not(:first-of-type):hover {
               background-color: @color-wjjhv;
-              box-shadow: 0 0 2px @color-bs;
+              box-shadow: 0 0 5px @color-bt;
             }
             th,
             td {
@@ -304,13 +319,13 @@ body {
           margin-top: 1rem;
           height: 4rem;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-evenly;
           align-items: center;
           input {
             vertical-align: middle;
-            height: 2rem;
+            padding: 0.5rem;
             min-width: 5rem;
-            border: dotted 1px dimgrey;
+            border: solid 2px dimgrey;
             border-radius: 4px;
             box-sizing: border-box;
             background-color: gainsboro;
@@ -331,12 +346,11 @@ body {
   // 底部readme
   div.onemoe-readme {
     width: 100%;
-    margin: 50px auto 50px;
+    margin: 50px auto 0;
     border-radius: 3px;
     border: solid 5px rgba(137, 43, 226, 0.2);
     box-sizing: border-box;
     div.readme {
-      background-color: @color-bg;
       svg,
       span {
         display: none;
@@ -361,5 +375,11 @@ body {
         }
       }
     }
+  }
+  div[style="color: rgba(247,247,249,0);"] {
+    margin-top: 4rem;
+    flex: 1 0;
+    display: flex;
+    align-items: flex-end;
   }
 }
