@@ -11,4 +11,4 @@
 ## 使用
 
 - 向程序 theme 文件夹里添加 onemoe.php 文件，网站后台切换主题即可。
-- css 文件默认放在 catbox 图床上，如果主题加载缓慢，可以将 onemoe.min.css 添加到你的 od 网盘或者 cdn 上，然后将其地址替换掉 onemoe.php 中约 12 行处的地址，更多细节请访问[我的博客](https://www.2bboy.com/archives/154.html)。
+- css 文件默认放在我的网站上并提供百度 cdn 加速，如果自行修改 css 文件，可以将 修改后的 onemoe.css 添加到你的 od 网盘或者 cdn 上，然后将其地址替换掉 onemoe.php 中约 12 行处的地址，更多细节请访问[我的博客](https://www.2bboy.com/archives/154.html)。
