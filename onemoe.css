@@ -71,6 +71,7 @@ body div.operatediv {
   border: solid 2px blueviolet;
   box-shadow: 0 0 10px #339999;
   border-radius: 2px;
+  z-index: 999;
 }
 body div.operatediv div {
   color: #339999;
@@ -96,6 +97,15 @@ body div.operatediv div a.operatediv_close:hover {
   background-color: #339999;
   cursor: pointer;
   color: #fff;
+}
+body div.operatediv div label {
+  color: #333;
+  font-size: 1.8rem;
+  float: left;
+}
+body div.operatediv div select,
+body div.operatediv div input {
+  font-size: 1.6rem;
 }
 body div.mask {
   display: none;
@@ -137,12 +147,12 @@ body div.onemoe-more-disk div.more-disk a {
   padding: 5px;
   margin: auto 0.5rem;
   color: #339999;
+  transition: 0.4s;
 }
 body div.onemoe-more-disk div.more-disk a:hover {
   color: #fff;
   background-color: #339999;
   box-shadow: 0 0 5px #339999;
-  transition: 0.2s;
 }
 body div.list-wrapper#head-div div.list-header-container {
   margin-top: 2rem;
@@ -224,6 +234,22 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   background: rgba(0, 0, 0, 0);
   margin: 0 1.5rem;
 }
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type button {
+  color: #339999;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  padding: 0.3rem 0.8rem;
+  border: solid 2px #339999;
+  border-radius: 1.2rem;
+  background: rgba(221, 221, 221, 0.25);
+}
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type button:hover {
+  box-shadow: 0 0 5px #339999;
+  cursor: pointer;
+  color: whitesmoke;
+  border: solid 2px #339999;
+  background-color: rgba(137, 43, 226, 0.1);
+}
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:nth-of-type(2) {
   margin-top: 0;
 }
@@ -281,6 +307,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul {
   top: -0.5rem;
+  left: 1rem;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul li {
@@ -299,18 +326,17 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 }
 body div.list-wrapper#list-div div.list-body-container div#upload_div center {
   margin-top: 1rem;
-  height: 4rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 body div.list-wrapper#list-div div.list-body-container div#upload_div center input {
+  font-size: 1.2rem;
   vertical-align: middle;
   padding: 0.5rem;
   min-width: 5rem;
   border: solid 2px dimgrey;
   border-radius: 4px;
-  box-sizing: border-box;
   background-color: gainsboro;
 }
 body div.list-wrapper#list-div div.list-body-container div#upload_div center input:hover {

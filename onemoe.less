@@ -14,7 +14,6 @@
 @color-wjjhv: rgba(137, 43, 226, 0.1);
 @color-wjj-bg: rgba(204, 204, 204, 0.3);
 body {
-  // background-color: @color-bg;
   background-color: #8ec5fc;
   background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
   min-height: 100vh;
@@ -68,7 +67,8 @@ body {
       }
     }
   }
-  // 登录
+
+  // 登录,弹出菜单
   div[style="padding:1px"] {
     height: 4rem;
   }
@@ -78,6 +78,7 @@ body {
     border: solid 2px @color-bs;
     box-shadow: 0 0 10px @color-bt;
     border-radius: 2px;
+    z-index: 999;
     div {
       color: @color-bt;
       font-size: 1.5rem;
@@ -100,6 +101,15 @@ body {
           cursor: pointer;
           color: @color-bthv;
         }
+      }
+      label {
+        color: #333;
+        font-size: 1.8rem;
+        float: left;
+      }
+      select,
+      input {
+        font-size: 1.6rem;
       }
     }
   }
@@ -147,12 +157,12 @@ body {
         padding: 5px;
         margin: auto 0.5rem;
         color: @color-bt;
+        transition: 0.4s;
       }
       a:hover {
         color: #fff;
         background-color: @color-bt;
         box-shadow: 0 0 5px @color-bt;
-        transition: 0.2s;
       }
     }
   }
@@ -241,6 +251,22 @@ body {
               border: none;
               background: rgba(0, 0, 0, 0);
               margin: 0 1.5rem;
+              button {
+                color: @color-bt;
+                font-size: 1.2rem;
+                margin-left: 1rem;
+                padding: 0.3rem 0.8rem;
+                border: solid 2px @color-bt;
+                border-radius: 1.2rem;
+                background: rgba(221, 221, 221, 0.25);
+                &:hover {
+                  box-shadow: 0 0 5px @color-bt;
+                  cursor: pointer;
+                  color: whitesmoke;
+                  border: solid 2px @color-bt;
+                  background-color: @color-wjjhv;
+                }
+              }
             }
             &:nth-of-type(2) {
               margin-top: 0;
@@ -292,6 +318,7 @@ body {
                 // margin-right: -2rem;
                 ul {
                   top: -0.5rem;
+                  left: 1rem;
                   li {
                     padding: 0.5rem;
                     font-size: 1.3rem;
@@ -314,17 +341,16 @@ body {
       div#upload_div {
         center {
           margin-top: 1rem;
-          height: 4rem;
           display: flex;
           justify-content: space-evenly;
           align-items: center;
           input {
+            font-size: 1.2rem;
             vertical-align: middle;
             padding: 0.5rem;
             min-width: 5rem;
             border: solid 2px dimgrey;
             border-radius: 4px;
-            box-sizing: border-box;
             background-color: gainsboro;
           }
           input:hover {
