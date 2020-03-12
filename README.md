@@ -4,7 +4,7 @@
 
 ## 预览
 
-- [在线预览](https://pan.2bboy.com)
+- [在线预览](https://pan.2bboy.com/Public)
 
 ![](https://files.catbox.moe/4muekn.jpg)
 

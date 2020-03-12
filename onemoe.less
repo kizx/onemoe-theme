@@ -24,6 +24,13 @@ body {
   flex-direction: column;
   justify-content: center;
   // background-color: @color-bg;
+  // 利用时间撑开页面
+  div[style="color: rgba(247,247,249,0);"] {
+    margin-top: 4rem;
+    flex: 1 0;
+    display: flex;
+    align-items: flex-end;
+  }
   // 管理
   a.login,
   li.operate {
@@ -67,7 +74,6 @@ body {
       }
     }
   }
-
   // 登录,弹出菜单
   div[style="padding:1px"] {
     height: 4rem;
@@ -146,8 +152,11 @@ body {
   // 多盘
   div.onemoe-more-disk {
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     div.more-disk {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       a {
         text-decoration: none;
         border: solid 2px @color-bt;
@@ -155,10 +164,12 @@ body {
         font-weight: bold;
         font-size: 1.2rem;
         padding: 5px;
-        margin: auto 0.5rem;
+        margin: 3px 0.5rem;
         color: @color-bt;
         transition: 0.4s;
+        box-sizing: border-box;
       }
+      a[now],
       a:hover {
         color: #fff;
         background-color: @color-bt;
@@ -169,7 +180,7 @@ body {
   // head.md
   div.list-wrapper#head-div {
     div.list-header-container {
-      margin-top: 2rem;
+      margin-top: 1rem;
       div.readme {
         p {
           font-size: large;
@@ -184,7 +195,7 @@ body {
     border-radius: 5px;
     border: solid 5px rgba(137, 43, 226, 0.2);
     // background-color: @color-wjj-bg;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 1.5rem;
     // 文件路径
     div.list-header-container {
@@ -251,7 +262,9 @@ body {
               border: none;
               background: rgba(0, 0, 0, 0);
               margin: 0 1.5rem;
+              // 下载全部
               button {
+                display: none;
                 color: @color-bt;
                 font-size: 1.2rem;
                 margin-left: 1rem;
@@ -271,9 +284,15 @@ body {
             &:nth-of-type(2) {
               margin-top: 0;
             }
-            &:not(:first-of-type):hover {
-              background-color: @color-wjjhv;
-              box-shadow: 0 0 5px @color-bt;
+            // 文件列表
+            &:not(:first-of-type) {
+              transition: 0.2s;
+              border: solid 1px @color-bt;
+              &:hover {
+                background-color: @color-wjjhv;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 10px rgba(73, 90, 47, 0.4);
+              }
             }
             th,
             td {
@@ -286,7 +305,7 @@ body {
                 a {
                   color: #333;
                   margin-left: 0.5rem;
-                  &:hover {
+                  &:not([onclick]):hover {
                     color: @color-bt;
                     text-decoration: underline;
                   }
@@ -392,11 +411,5 @@ body {
         }
       }
     }
-  }
-  div[style="color: rgba(247,247,249,0);"] {
-    margin-top: 4rem;
-    flex: 1 0;
-    display: flex;
-    align-items: flex-end;
   }
 }
