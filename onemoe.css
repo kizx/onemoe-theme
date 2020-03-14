@@ -145,27 +145,42 @@ body div.onemoe-more-disk {
   margin-top: 1rem;
 }
 body div.onemoe-more-disk div.more-disk {
+  background: #f2f5fa;
+  border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+body div.onemoe-more-disk div.more-disk:hover {
+  box-shadow: 0 0 5px #339999;
+}
 body div.onemoe-more-disk div.more-disk a {
   text-decoration: none;
-  border: solid 2px #339999;
-  border-radius: 5px;
   font-weight: bold;
-  font-size: 1.2rem;
-  padding: 5px;
-  margin: 3px 0.5rem;
-  color: #339999;
+  font-size: 1.3rem;
+  padding: 8px 16px;
+  margin: 0;
+  color: #999;
   transition: 0.4s;
   box-sizing: border-box;
 }
-body div.onemoe-more-disk div.more-disk a[now],
+body div.onemoe-more-disk div.more-disk a:first-of-type {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+body div.onemoe-more-disk div.more-disk a:last-of-type {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+body div.onemoe-more-disk div.more-disk a[now] {
+  color: #339999;
+  background-color: #dbc3fc;
+  border-bottom: solid 3px #339999;
+}
 body div.onemoe-more-disk div.more-disk a:hover {
   color: #fff;
   background-color: #339999;
-  box-shadow: 0 0 5px #339999;
+  box-shadow: 0 0 5px #99cc99;
 }
 body div.list-wrapper#head-div div.list-header-container {
   margin-top: 1rem;
@@ -188,9 +203,10 @@ body div.list-wrapper#list-div div.list-header-container {
   background-color: #e0c3fc98;
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon {
+  margin-top: 2px;
   color: #339999;
   width: 2rem;
   height: 2rem;
@@ -200,9 +216,8 @@ body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon:ho
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header {
   font-size: 1.5rem;
-  margin: 1rem;
+  margin: 10px;
   color: #339999;
-  font-style: italic;
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header a {
   color: #339999;
@@ -210,6 +225,7 @@ body div.list-wrapper#list-div div.list-header-container h3.table-header a {
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header a:hover {
   color: #ff9900;
+  text-decoration: underline;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table {
   margin: auto;
@@ -218,7 +234,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table {
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
   color: #333;
   background-color: #fff;
-  margin: 1rem;
+  margin: 0.6rem;
   border: solid 1px #339999;
   border-radius: 5px;
   display: grid;
@@ -268,10 +284,13 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   margin-top: 0;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type) {
+  height: 40px;
+  box-sizing: border-box;
   transition: 0.2s;
   border: solid 1px #339999;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type):hover {
+  border-width: 2px;
   background-color: rgba(137, 43, 226, 0.1);
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(73, 90, 47, 0.4);
@@ -325,7 +344,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li.operate ul {
-  top: -0.5rem;
+  top: -0.7rem;
   left: 1rem;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li.operate ul li,
@@ -363,12 +382,39 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
   box-shadow: 0 0 10px cornflowerblue;
   cursor: pointer;
 }
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] textarea {
+  border: #999 solid 2px;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] textarea:hover {
+  border: #339999 solid 2px;
+  box-shadow: 0 0 5px #339999;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] a {
+  margin-top: 10px;
+  padding: 2px 10px;
+  width: auto;
+  border: solid 2px #339999;
+  border-radius: 5px;
+  transition: 0.4s;
+  background: #dcdcdc;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] a:hover {
+  font-weight: bold;
+  color: #fff;
+  background: #339999;
+  text-decoration: none;
+}
 body div.list-wrapper#list-div:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
 }
 body div.onemoe-readme {
   width: 100%;
-  margin: 4rem auto 0;
+  margin: 2rem auto 0;
   border-radius: 3px;
   border: solid 5px rgba(137, 43, 226, 0.2);
   box-sizing: border-box;
