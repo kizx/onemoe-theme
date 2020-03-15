@@ -208,8 +208,8 @@ body div.list-wrapper#list-div div.list-header-container a.back-link {
 body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon {
   margin-top: 2px;
   color: #339999;
-  width: 2rem;
-  height: 2rem;
+  width: 20px;
+  height: 20px;
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon:hover {
   color: #ff9900;
@@ -218,6 +218,7 @@ body div.list-wrapper#list-div div.list-header-container h3.table-header {
   font-size: 1.5rem;
   margin: 10px;
   color: #339999;
+  word-break: break-all;
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header a {
   color: #339999;
@@ -261,7 +262,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type {
   border: none;
   background: rgba(0, 0, 0, 0);
-  margin: 0 1.5rem;
+  margin: -2px 1.5rem;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type button {
   display: none;
@@ -382,32 +383,45 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
   box-shadow: 0 0 10px cornflowerblue;
   cursor: pointer;
 }
-body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] {
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] textarea {
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div textarea {
   border: #999 solid 2px;
+  padding: 5px;
 }
-body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] textarea:hover {
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div textarea:hover {
   border: #339999 solid 2px;
   box-shadow: 0 0 5px #339999;
 }
-body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] a {
-  margin-top: 10px;
-  padding: 2px 10px;
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div textarea:focus {
+  outline-color: #999;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div a {
+  color: #339999;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin-top: 15px;
+  padding: 3px 14px 3px 10px;
   width: auto;
   border: solid 2px #339999;
   border-radius: 5px;
   transition: 0.4s;
-  background: #dcdcdc;
+  background: #fff;
 }
-body div.list-wrapper#list-div div.list-body-container div[style="margin: 24px"] a:hover {
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div a:hover {
   font-weight: bold;
   color: #fff;
   background: #339999;
   text-decoration: none;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div a .hydrated {
+  display: none;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div img {
+  width: 100%;
 }
 body div.list-wrapper#list-div:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
@@ -424,13 +438,4 @@ body div.onemoe-readme div.markdown-body {
 }
 body div.onemoe-readme:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
-}
-body div[style="margin: 12px 4px 4px; text-align: center"] div a {
-  font-size: 1.8rem;
-  color: #339999;
-  text-decoration: none;
-}
-body div[style="margin: 12px 4px 4px; text-align: center"] div a:hover {
-  text-decoration: underline;
-  color: #ff9900;
 }
