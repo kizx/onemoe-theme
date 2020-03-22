@@ -150,6 +150,8 @@ body div.onemoe-more-disk div.more-disk {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 body div.onemoe-more-disk div.more-disk:hover {
   box-shadow: 0 0 5px #339999;
@@ -163,14 +165,6 @@ body div.onemoe-more-disk div.more-disk a {
   color: #999;
   transition: 0.4s;
   box-sizing: border-box;
-}
-body div.onemoe-more-disk div.more-disk a:first-of-type {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-body div.onemoe-more-disk div.more-disk a:last-of-type {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 body div.onemoe-more-disk div.more-disk a[now] {
   color: #339999;
@@ -421,6 +415,9 @@ body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4
   display: none;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div img {
+  width: 100%;
+}
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] div #txt {
   width: 100%;
 }
 body div.list-wrapper#list-div:hover {
