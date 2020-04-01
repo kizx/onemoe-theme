@@ -259,7 +259,6 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   margin: -2px 1.5rem;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type button {
-  display: none;
   color: #339999;
   font-size: 1.2rem;
   margin-left: 1rem;

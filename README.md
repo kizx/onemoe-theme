@@ -16,6 +16,20 @@ background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
 > 配色网站 1：https://www.grabient.com/  
 > 配色网站 2：https://gradient.shapefactory.co/
 
+- 如果你想使用背景图片的话，请在 background 填写类似下面的代码。
+
+```css
+background-image: url("/img/thumb/012.jpg");
+```
+
+- 当然这里其实我是把这个 background 当作自定义 css 功能来用，比如填入下面的 css 代码可以隐藏全部下载的按钮。
+
+```css
+.file button {
+  display: none;
+}
+```
+
 以下为手动配置
 
 - 向程序 theme 文件夹里添加 onemoe.php 或 onemoe-css.php 文件，网站后台切换主题即可。
