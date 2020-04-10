@@ -19,11 +19,10 @@ body {
   min-height: 100vh;
   margin: auto;
   padding: 0 0.5rem;
-  max-width: 960px;
+  max-width: 1024px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // background-color: @color-bg;
   // 利用时间撑开页面
   div[style="color: rgba(247,247,249,0);"] {
     margin-top: 4rem;
@@ -31,7 +30,18 @@ body {
     display: flex;
     align-items: flex-end;
   }
-  // 管理
+
+  // 语言
+  div#top-div {
+    display: flex;
+    height: 25px;
+    select.changelanguage {
+      border: solid 1px rgb(150, 150, 150);
+      border-radius: 2px;
+      margin-left: auto;
+    }
+  }
+  // 管理菜单
   a.login,
   li.operate {
     font-size: 1.2rem;
@@ -39,6 +49,9 @@ body {
     position: relative;
     list-style: none;
     width: 5rem;
+    &:hover {
+      cursor: pointer;
+    }
     ion-icon {
       vertical-align: middle;
     }
@@ -132,25 +145,22 @@ body {
   // 标题
   h1.title {
     margin: auto;
-    font-size: 3.5rem;
+    font-size: 3rem;
     a {
       font-family: Cursive;
       text-decoration: none;
       color: rgb(50, 144, 231);
-      text-shadow: 2px 2px 5px rgba(50, 144, 231, 0.5);
+      text-shadow: 2px 2px 5px rgba(50, 144, 231, 0.3);
       transition: 0.2s;
       &:hover {
         text-shadow: none;
-        font-size: 3.8rem;
+        font-size: 3.5rem;
       }
     }
   }
-  // 语言
-  select.changelanguage {
-    display: none;
-  }
+
   // 多盘
-  div.onemoe-more-disk {
+  div.list-wrapper#more-disk-div {
     margin: auto;
     margin-top: 1rem;
     div.more-disk {
@@ -186,6 +196,7 @@ body {
       }
     }
   }
+
   // head.md
   div.list-wrapper#head-div {
     div.list-header-container {
@@ -201,8 +212,9 @@ body {
 
   // 主体
   div.list-wrapper#list-div {
+    background-color: rgba(245, 245, 245, 0.3);
     border-radius: 5px;
-    border: solid 5px rgba(137, 43, 226, 0.2);
+    border: solid 5px rgba(137, 43, 226, 0.3);
     // background-color: @color-wjj-bg;
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -220,8 +232,14 @@ body {
           color: @color-bt;
           width: 20px;
           height: 20px;
+          background-color: #fff;
+          border-radius: 50%;
+          border: solid 2px @color-bt;
           &:hover {
             color: @color-dj;
+            background-color: @color-bthv;
+            border: solid 2px darkorange;
+            box-shadow: 0 0 5px @color-dj;
           }
         }
       }
@@ -230,7 +248,7 @@ body {
         margin: 10px;
         color: @color-bt;
         word-break: break-all;
-        // font-style: italic;
+        color: #444;
         a {
           color: @color-bt;
           text-decoration: none;
@@ -252,7 +270,7 @@ body {
             background-color: @color-wjj;
             margin: 0.6rem;
             border: solid 1px @color-bt;
-            border-radius: 5px;
+            border-radius: 4px;
             display: grid;
             grid-template-columns: 6fr 2fr 1fr;
             @media screen and(max-width:768px) {
@@ -283,13 +301,13 @@ body {
                 padding: 0.3rem 0.8rem;
                 border: solid 2px @color-bt;
                 border-radius: 1.2rem;
-                background: rgba(221, 221, 221, 0.25);
+                background: rgba(255, 255, 255, 0.25);
                 &:hover {
-                  box-shadow: 0 0 5px @color-bt;
+                  box-shadow: 0 0 5px @color-dj;
                   cursor: pointer;
-                  color: whitesmoke;
-                  border: solid 2px @color-bt;
-                  background-color: @color-wjjhv;
+                  color: @color-dj;
+                  border: solid 2px @color-dj;
+                  background-color: #f2f5fa;
                 }
               }
             }
@@ -302,9 +320,10 @@ body {
               box-sizing: border-box;
               transition: 0.2s;
               border: solid 1px @color-bt;
+              background-color: rgba(255, 255, 255, 0.8);
               &:hover {
-                border-width: 2px;
-                background-color: @color-wjjhv;
+                // border-width: 2px;
+                background-color: rgba(255, 255, 255, 0);
                 transform: translateY(-2px);
                 box-shadow: 0 5px 10px rgba(73, 90, 47, 0.4);
               }
@@ -389,14 +408,14 @@ body {
           }
           input:hover {
             color: #339999;
-            box-shadow: 0 0 10px cornflowerblue;
+            box-shadow: 0 0 10px rgb(105, 105, 105);
             cursor: pointer;
           }
         }
       }
       // 下载页面
       div[style="margin: 12px 4px 4px; text-align: center"] {
-        div {
+        > div:first-of-type {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -420,10 +439,9 @@ body {
             width: auto;
             border: solid 2px @color-bt;
             border-radius: 5px;
-            transition: 0.4s;
+            transition: 0.2s;
             background: #fff;
             &:hover {
-              font-weight: bold;
               color: @color-bthv;
               background: @color-bt;
               text-decoration: none;
@@ -432,11 +450,50 @@ body {
               display: none;
             }
           }
-          img {
-            width: 100%;
-          }
-          #txt {
-            width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+        #txt {
+          width: 100%;
+        }
+      }
+      // 翻页
+      form#nextpageform {
+        margin: 0 10px 10px;
+        tbody {
+          tr {
+            td {
+              &.updated_at {
+                padding: 0 10px;
+                a {
+                  padding: 0 5px;
+                  border: solid 1px dimgrey;
+                  border-radius: 4px;
+                  background-color: floralwhite;
+                  color: #333;
+                  &:hover {
+                    cursor: pointer;
+                    color: @color-bt;
+                    background-color: #ccc;
+                    border: solid 1px @color-bt;
+                  }
+                }
+              }
+              &:first-of-type,
+              &:last-of-type {
+                border: solid 2px dimgrey;
+                border-radius: 4px;
+                background-color: floralwhite;
+                color: #333;
+                &:hover {
+                  cursor: pointer;
+                  color: @color-bt;
+                  background-color: #ccc;
+                  border: solid 2px @color-bt;
+                }
+              }
+            }
           }
         }
       }
@@ -447,14 +504,15 @@ body {
     box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
   }
   // 底部readme
-  div.onemoe-readme {
+  div.list-wrapper#readme-div {
+    background-color: rgba(245, 245, 245, 0.3);
     width: 100%;
     margin: 2rem auto 0;
     border-radius: 3px;
-    border: solid 5px rgba(137, 43, 226, 0.2);
+    border: solid 5px rgba(137, 43, 226, 0.4);
     box-sizing: border-box;
     div.markdown-body {
-      padding: 1rem;
+      padding: 5px;
     }
     &:hover {
       box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);

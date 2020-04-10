@@ -1,40 +1,48 @@
 ## 说明
 
-这是为 onedrive 云盘程序[OneManager](https://github.com/qkqpttgf/OneManager-php)写的一个简单的 css 主题，参考了 OneIndex 的主题样式。
+这是 onedrive 云盘程序[OneManager](https://github.com/qkqpttgf/OneManager-php)的一个 CSS 美化 主题。
 
 ## 使用
 
-- OneManager 程序已内置 onemoe-css.php 文件，后台启用 onemoe 主题即可。
-- 本主题可以自定义背景渐近色，在后台设置背景图片的地方，将 background 设置为类似下面的渐近色 css 代码即可。
+- 方法一：OneManager 程序已内置本主题，后台启用 onemoe 主题即可。
+- 方法二：在 OneManager 最新版本中，后台 customStyle 处填写以下内容亦可。
 
-```css
-background-color: #8ec5fc;
-background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+```html
+<link
+  rel="stylesheet"
+  href="https://www.2bboy.com/usr/uploads/onemoe.min.css"
+  type="text/css"
+/>
+```
+
+- 本主题可以自定义背景渐近色（使用渐近色背景必须清空背景图片 background 参数），在后台 customStyle 添加下面的代码即可，代码中的渐近色可以自行替换。
+
+```html
+<style type="text/css">
+  body {
+    background-color: #8ec5fc;
+    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  }
+</style>
 ```
 
 > 什么？你不会渐近色代码？放心，我也不会，只需要从类似下面的一些渐近色配色网站 copy css 然后粘贴过来即可。  
 > 配色网站 1：https://www.grabient.com/  
 > 配色网站 2：https://gradient.shapefactory.co/
 
-- 如果你想使用背景图片的话，请在 background 填写类似下面的代码。
+- 隐藏语言选项和全部下载按钮的方法：在 customStyle 中添加以下内容。
 
-```css
-background-image: url("/img/thumb/012.jpg");
+```html
+<style type="text/css">
+  .file button {
+    display: none;
+  }
+  .changelanguage {
+    display: none;
+  }
+</style>
 ```
 
-- 当然这里其实我是把这个 background 当作自定义 css 功能来用，比如填入下面的 css 代码可以隐藏全部下载的按钮。
-
-```css
-.file button {
-  display: none;
-}
-```
-
-以下为手动配置
-
-- 向程序 theme 文件夹里添加 onemoe.php 或 onemoe-css.php 文件，网站后台切换主题即可。
-- 其中 onemoe.php 中 css 文件默认放在我的网站上并提供百度 cdn 加速，如果自行下载修改 css 文件，可以将 修改后的 onemoe.css 添加到你的 od 网盘或者 cdn 上，然后将其地址替换掉 onemoe.php 中约 13 行处的地址。
-- 其中 onemoe-css.php 只是将 css 内置内部样式而已。
 - 更多细节请访问 [我的博客](https://www.2bboy.com/archives/154.html)。
 
 ## 预览
