@@ -10,7 +10,7 @@
     <link rel="icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="<?php echo $_SERVER['base_disk_path'];?>favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="https://cloud.tencent.com/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://www.2bboy.com/usr/uploads/onemoe.css" type="text/css">
+    <link rel="stylesheet" href="https://www.2bboy.com/usr/uploads/onemoe.min.css" type="text/css">
     <style type="text/css">
         body{<?php if (getConfig('background')) { ?>background-repeat:no-repeat;background-size:cover;background-attachment:fixed;<?php } ?>}
         body{<?php if (getConfig('background')) { ?><?php echo getConfig('background'); ?><?php } ?>}
