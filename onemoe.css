@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-body div[style="color: rgba(247,247,249,0);"] {
+body > div[style="color: rgba(247,247,249,0);"] {
   margin-top: 4rem;
   flex: 1 0;
   display: flex;
@@ -87,10 +87,12 @@ body div[style="padding:1px"] {
 body div.operatediv {
   position: fixed;
   background-color: #ddd;
-  border: solid 2px blueviolet;
-  box-shadow: 0 0 10px #339999;
-  border-radius: 2px;
+  border: solid 2px rgba(137, 43, 226, 0.5);
+  border-radius: 4px;
   z-index: 999;
+}
+body div.operatediv:hover {
+  box-shadow: 0 0 10px #339999;
 }
 body div.operatediv div {
   color: #339999;
@@ -129,24 +131,24 @@ body div.operatediv div input {
 body div.mask {
   display: none;
 }
-body div[style="position:absolute;"] {
+body > div[style="position:absolute;"] {
   top: 2rem;
   background-color: yellow;
   border-radius: 2px;
   padding: 5px;
 }
-body h1.title {
+body > h1.title {
   margin: auto;
   font-size: 3rem;
 }
-body h1.title a {
+body > h1.title a {
   font-family: Cursive;
   text-decoration: none;
   color: #3290e7;
   text-shadow: 2px 2px 5px rgba(50, 144, 231, 0.3);
   transition: 0.2s;
 }
-body h1.title a:hover {
+body > h1.title a:hover {
   text-shadow: none;
   font-size: 3.5rem;
 }
@@ -155,7 +157,7 @@ body div.list-wrapper#more-disk-div {
   margin-top: 1rem;
 }
 body div.list-wrapper#more-disk-div div.more-disk {
-  background: #f2f5fa;
+  background: #f8f8f8d0;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -170,9 +172,9 @@ body div.list-wrapper#more-disk-div div.more-disk a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3rem;
-  padding: 8px 16px;
+  padding: 7px 15px;
   margin: 0;
-  color: #999;
+  color: #888;
   transition: 0.4s;
   box-sizing: border-box;
 }
@@ -200,6 +202,9 @@ body div.list-wrapper#list-div {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
+body div.list-wrapper#list-div:hover {
+  box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
+}
 body div.list-wrapper#list-div div.list-header-container {
   border-radius: 2px;
   border-bottom: dashed 1px rgba(59, 66, 107, 0.3);
@@ -215,29 +220,27 @@ body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon {
   color: #339999;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: #ddd;
   border-radius: 50%;
   border: solid 2px #339999;
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon:hover {
-  color: #ff9900;
   background-color: #fff;
-  border: solid 2px darkorange;
-  box-shadow: 0 0 5px #ff9900;
+  box-shadow: 0 0 5px #339999;
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header {
   font-size: 1.5rem;
   margin: 10px;
   color: #339999;
   word-break: break-all;
-  color: #444;
+  color: #666;
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header a {
   color: #339999;
   text-decoration: none;
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header a:hover {
-  color: #ff9900;
+  color: darkcyan;
   text-decoration: underline;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table {
@@ -246,7 +249,6 @@ body div.list-wrapper#list-div div.list-body-container table.list-table {
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr {
   color: #333;
-  background-color: #fff;
   margin: 0.6rem;
   border: solid 1px #339999;
   border-radius: 4px;
@@ -286,10 +288,8 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   background: rgba(255, 255, 255, 0.25);
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:first-of-type button:hover {
-  box-shadow: 0 0 5px #ff9900;
+  box-shadow: 0 0 5px #339999;
   cursor: pointer;
-  color: #ff9900;
-  border: solid 2px #ff9900;
   background-color: #f2f5fa;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:nth-of-type(2) {
@@ -300,7 +300,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   box-sizing: border-box;
   transition: 0.2s;
   border: solid 1px #339999;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type):hover {
   background-color: rgba(255, 255, 255, 0);
@@ -375,7 +375,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   text-decoration: none;
 }
 body div.list-wrapper#list-div div.list-body-container div#upload_div center {
-  margin-top: 1rem;
+  margin-top: 5px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -390,7 +390,6 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
   background-color: gainsboro;
 }
 body div.list-wrapper#list-div div.list-body-container div#upload_div center input:hover {
-  color: #339999;
   box-shadow: 0 0 10px #696969;
   cursor: pointer;
 }
@@ -469,15 +468,12 @@ body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody t
   background-color: #ccc;
   border: solid 2px #339999;
 }
-body div.list-wrapper#list-div:hover {
-  box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
-}
 body div.list-wrapper#readme-div {
   background-color: rgba(245, 245, 245, 0.3);
   width: 100%;
   margin: 2rem auto 0;
   border-radius: 3px;
-  border: solid 5px rgba(137, 43, 226, 0.4);
+  border: solid 5px rgba(137, 43, 226, 0.3);
   box-sizing: border-box;
 }
 body div.list-wrapper#readme-div div.markdown-body {

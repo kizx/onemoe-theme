@@ -1,0 +1,51 @@
+// out:false
+// 登录,弹出菜单
+div[style="padding:1px"] {
+  height: 4rem;
+}
+div.operatediv {
+  position: fixed;
+  background-color: #ddd;
+  border: solid 2px rgba(137, 43, 226, 0.5);
+  border-radius: 4px;
+  z-index: 999;
+  &:hover {
+    box-shadow: 0 0 10px @color-bt;
+  }
+  div {
+    color: @color-bt;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    input[type="submit"],
+    a.operatediv_close {
+      align-self: flex-end;
+      width: auto;
+      padding: 1px 5px;
+      margin: 5px 0;
+      border: solid 2px @color-bt;
+      border-radius: 2px;
+      text-align: center;
+      font-size: 1.5rem;
+      color: @color-bt;
+      &:hover {
+        background-color: @color-bt;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+    label {
+      color: #333;
+      font-size: 1.8rem;
+      float: left;
+    }
+    select,
+    input {
+      font-size: 1.6rem;
+    }
+  }
+}
+div.mask {
+  display: none;
+}
