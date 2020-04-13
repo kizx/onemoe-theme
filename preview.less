@@ -8,27 +8,28 @@ div[style="margin: 12px 4px 4px; text-align: center"] {
       border: #999 solid 2px;
       padding: 5px;
       &:hover {
-        border: @color-bt solid 2px;
-        box-shadow: 0 0 5px @color-bt;
+        border: solid 2px #666;
+        box-shadow: 0 0 10px rgb(105, 105, 105);
       }
       &:focus {
         outline-color: #999;
       }
     }
     a {
-      color: @color-bt;
       text-decoration: none;
       font-size: 1.6rem;
       margin-top: 15px;
-      padding: 3px 14px 3px 10px;
+      padding: 2px 12px 3px 7px;
       width: auto;
-      border: solid 2px @color-bt;
-      border-radius: 5px;
+      border: solid 2px dimgrey;
+      background-color: gainsboro;
+      color: #333;
+      border-radius: 2px;
       transition: 0.2s;
-      background: #fff;
       &:hover {
-        color: #fff;
-        background: @color-bt;
+        border: solid 2px #666;
+        box-shadow: 0 0 10px rgb(105, 105, 105);
+        background-color: rgb(243, 243, 243);
         text-decoration: none;
       }
       .hydrated {

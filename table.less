@@ -126,13 +126,14 @@ div.list-body-container {
       }
     }
   }
-  // 上传
+  // 上传按钮
   div#upload_div {
     center {
       margin-top: 5px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      select,
       input {
         font-size: 1.2rem;
         vertical-align: middle;
@@ -141,14 +142,17 @@ div.list-body-container {
         border: solid 2px dimgrey;
         border-radius: 4px;
         background-color: gainsboro;
-      }
-      input:hover {
-        box-shadow: 0 0 10px rgb(105, 105, 105);
-        cursor: pointer;
+        &:hover {
+          box-shadow: 0 0 10px rgb(105, 105, 105);
+          background-color: rgb(233, 233, 233);
+          cursor: pointer;
+        }
       }
     }
   }
+
   @import "preview.less"; // 预览页面
+
   // 翻页
   form#nextpageform {
     margin: 0 10px 10px;
@@ -161,13 +165,12 @@ div.list-body-container {
               padding: 0 5px;
               border: solid 1px dimgrey;
               border-radius: 4px;
-              background-color: floralwhite;
+              background-color: gainsboro;
               color: #333;
               &:hover {
                 cursor: pointer;
                 color: @color-bt;
-                background-color: #ccc;
-                border: solid 1px @color-bt;
+                background-color: #fff;
               }
             }
           }
@@ -175,13 +178,12 @@ div.list-body-container {
           &:last-of-type {
             border: solid 2px dimgrey;
             border-radius: 4px;
-            background-color: floralwhite;
+            background-color: gainsboro;
             color: #333;
             &:hover {
               cursor: pointer;
-              color: @color-bt;
-              background-color: #ccc;
-              border: solid 2px @color-bt;
+              box-shadow: 0 0 10px rgb(105, 105, 105);
+              background-color: #fff;
             }
           }
         }

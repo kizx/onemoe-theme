@@ -380,6 +380,7 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center {
   justify-content: space-evenly;
   align-items: center;
 }
+body div.list-wrapper#list-div div.list-body-container div#upload_div center select,
 body div.list-wrapper#list-div div.list-body-container div#upload_div center input {
   font-size: 1.2rem;
   vertical-align: middle;
@@ -389,8 +390,10 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
   border-radius: 4px;
   background-color: gainsboro;
 }
+body div.list-wrapper#list-div div.list-body-container div#upload_div center select:hover,
 body div.list-wrapper#list-div div.list-body-container div#upload_div center input:hover {
   box-shadow: 0 0 10px #696969;
+  background-color: #e9e9e9;
   cursor: pointer;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type {
@@ -403,27 +406,28 @@ body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4
   padding: 5px;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type textarea:hover {
-  border: #339999 solid 2px;
-  box-shadow: 0 0 5px #339999;
+  border: solid 2px #666;
+  box-shadow: 0 0 10px #696969;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type textarea:focus {
   outline-color: #999;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type a {
-  color: #339999;
   text-decoration: none;
   font-size: 1.6rem;
   margin-top: 15px;
-  padding: 3px 14px 3px 10px;
+  padding: 2px 12px 3px 7px;
   width: auto;
-  border: solid 2px #339999;
-  border-radius: 5px;
+  border: solid 2px dimgrey;
+  background-color: gainsboro;
+  color: #333;
+  border-radius: 2px;
   transition: 0.2s;
-  background: #fff;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type a:hover {
-  color: #fff;
-  background: #339999;
+  border: solid 2px #666;
+  box-shadow: 0 0 10px #696969;
+  background-color: #f3f3f3;
   text-decoration: none;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type a .hydrated {
@@ -445,28 +449,26 @@ body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody t
   padding: 0 5px;
   border: solid 1px dimgrey;
   border-radius: 4px;
-  background-color: floralwhite;
+  background-color: gainsboro;
   color: #333;
 }
 body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody tr td.updated_at a:hover {
   cursor: pointer;
   color: #339999;
-  background-color: #ccc;
-  border: solid 1px #339999;
+  background-color: #fff;
 }
 body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody tr td:first-of-type,
 body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody tr td:last-of-type {
   border: solid 2px dimgrey;
   border-radius: 4px;
-  background-color: floralwhite;
+  background-color: gainsboro;
   color: #333;
 }
 body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody tr td:first-of-type:hover,
 body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody tr td:last-of-type:hover {
   cursor: pointer;
-  color: #339999;
-  background-color: #ccc;
-  border: solid 2px #339999;
+  box-shadow: 0 0 10px #696969;
+  background-color: #fff;
 }
 body div.list-wrapper#readme-div {
   background-color: rgba(245, 245, 245, 0.3);
