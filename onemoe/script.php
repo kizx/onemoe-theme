@@ -308,7 +308,7 @@
     function preup() {
         uploadbuttonhide();
         var files=document.getElementById('upload_file').files;
-	if (files.length<1) {
+	    if (files.length<1) {
             uploadbuttonshow();
             return;
         };
@@ -327,7 +327,7 @@
             tr1.appendChild(td1);
             td1.setAttribute('style','width:30%');
             td1.setAttribute('id','upfile_td1_'+timea+'_'+i);
-            td1.innerHTML=file.name+'<br>'+size_format(file.size);
+            td1.innerHTML=(file.webkitRelativePath||file.name)+'<br>'+size_format(file.size);
             var td2=document.createElement('td');
             tr1.appendChild(td2);
             td2.setAttribute('id','upfile_td2_'+timea+'_'+i);
@@ -338,7 +338,7 @@
                 return;
             }
             var xhr1 = new XMLHttpRequest();
-            xhr1.open("GET", '?action=upbigfile&upbigfilename='+ encodeURIComponent(file.name) +'&filesize='+ file.size +'&lastModified='+ file.lastModified);
+            xhr1.open("GET", '?action=upbigfile&upbigfilename='+ encodeURIComponent((file.webkitRelativePath||file.name)) +'&filesize='+ file.size +'&lastModified='+ file.lastModified);
             xhr1.setRequestHeader('x-requested-with','XMLHttpRequest');
             xhr1.send(null);
             xhr1.onload = function(e){
@@ -449,7 +449,7 @@
                             if (response['size']>0) {
                                 // contain size, upload finish. 有size说明是最终返回，上传结束
                                 var xhr3 = new XMLHttpRequest();
-                                xhr3.open("GET", '?action=del_upload_cache&filename=.'+file.lastModified+ '_' +file.size+ '_' +encodeURIComponent(file.name)+'.tmp');
+                                xhr3.open("GET", '?action=del_upload_cache&filelastModified='+file.lastModified+'&filesize='+file.size+'&filename='+encodeURIComponent((file.webkitRelativePath||file.name)));
                                 xhr3.setRequestHeader('x-requested-with','XMLHttpRequest');
                                 xhr3.send(null);
                                 xhr3.onload = function(e){
@@ -458,14 +458,14 @@
 <?php if (!$_SERVER['admin']) { ?>
                                 var filemd5 = spark.end();
                                 var xhr4 = new XMLHttpRequest();
-                                xhr4.open("GET", '?action=uploaded_rename&filename='+encodeURIComponent(file.name)+'&filemd5='+filemd5);
+                                xhr4.open("GET", '?action=uploaded_rename&filename='+encodeURIComponent((file.webkitRelativePath||file.name))+'&filemd5='+filemd5);
                                 xhr4.setRequestHeader('x-requested-with','XMLHttpRequest');
                                 xhr4.send(null);
                                 xhr4.onload = function(e){
                                     console.log(xhr4.responseText+','+xhr4.status);
                                     var filename;
                                     //if (xhr4.status==200) filename = JSON.parse(xhr4.responseText)['name'];
-                                    //if (xhr4.status==409) filename = filemd5 + file.name.substr(file.name.indexOf('.'));
+                                    //if (xhr4.status==409) filename = filemd5 + (file.webkitRelativePath||file.name).substr((file.webkitRelativePath||file.name).indexOf('.'));
                                     filename = JSON.parse(xhr4.responseText)['name'];
                                     if (filename=='') {
                                         alert('<?php echo getconstStr('UploadErrorUpAgain'); ?>');
@@ -507,7 +507,7 @@
                         xhr.send(binary);
                     }
                 } else {
-                    if (window.location.pathname.indexOf('%23')>0||file.name.indexOf('%23')>0) {
+                    if (window.location.pathname.indexOf('%23')>0||(file.webkitRelativePath||file.name).indexOf('%23')>0) {
                         label.innerHTML='<font color="red"><?php echo getconstStr('UploadFail23'); ?></font>';
                     } else {
                         label.innerHTML='<font color="red">'+xhr2.responseText+'</font>';

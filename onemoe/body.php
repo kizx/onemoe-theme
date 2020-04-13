@@ -109,7 +109,14 @@
                     else $filenum = 0; ?>
                 <table class="list-table" id="list-table">
                     <tr id="tr0">
-                        <th class="file"><a onclick="sortby('a');"><?php echo getconstStr('File'); ?></a><?php if (!(isset($_SERVER['USER'])&&$_SERVER['USER']=='qcloud')) { ?>&nbsp;&nbsp;&nbsp;<button onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button><?php } ?>&nbsp;<button onclick="CopyAllDownloadUrl('.download');"><?php echo getconstStr('CopyAllDownloadUrl'); ?></button></th>
+                        <th class="file">
+                            <a onclick="sortby('a');"><?php echo getconstStr('File'); ?></a>
+<?php if (!(isset($_SERVER['USER'])&&$_SERVER['USER']=='qcloud')) { ?>
+                            &nbsp;&nbsp;&nbsp;
+                            <button onclick="showthumbnails(this);"><?php echo getconstStr('ShowThumbnails'); ?></button>
+<?php } ?>                  &nbsp;
+                            <button onclick="CopyAllDownloadUrl('.download');"><?php echo getconstStr('CopyAllDownloadUrl'); ?></button>
+                        </th>
                         <th class="updated_at"><a onclick="sortby('time');"><?php echo getconstStr('EditTime'); ?></a></th>
                         <th class="size"><a onclick="sortby('size');"><?php echo getconstStr('Size'); ?></a></th>
                     </tr>
@@ -235,6 +242,10 @@
                     if ($_SERVER['admin']) { ?>
                 <div id="upload_div" style="margin:0 0 16px 0">
                 <center>
+                    <select onchange="document.getElementById('upload_file').webkitdirectory=this.value;">
+                        <option value=""><?php echo getconstStr('UploadFile');?></option>
+                        <option value="1"><?php echo getconstStr('UploadFolder');?></option>
+                    </select>
                     <input id="upload_file" type="file" name="upload_filename" multiple="multiple">
                     <input id="upload_submit" onclick="preup();" value="<?php echo getconstStr('Upload'); ?>" type="button">
                 </center>

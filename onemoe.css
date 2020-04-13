@@ -300,10 +300,10 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   box-sizing: border-box;
   transition: 0.2s;
   border: solid 1px #339999;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type):hover {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(73, 90, 47, 0.4);
 }
