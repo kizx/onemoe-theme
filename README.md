@@ -24,7 +24,8 @@ body {
 - 隐藏语言选项和全部下载按钮的方法：在 customCss 中添加以下内容。
 
 ```css
-<style > .file button {
+<style >
+.file button {
   display: none;
 }
 .changelanguage {
