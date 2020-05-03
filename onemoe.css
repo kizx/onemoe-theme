@@ -13,12 +13,6 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-body > div[style="color: rgba(247,247,249,0);"] {
-  margin-top: 4rem;
-  flex: 1 0;
-  display: flex;
-  align-items: flex-end;
-}
 body div#top-div {
   display: flex;
   height: 25px;
@@ -154,10 +148,10 @@ body > h1.title a:hover {
 }
 body div.list-wrapper#more-disk-div {
   margin: auto;
-  margin-top: 1rem;
+  margin: 5px auto;
 }
 body div.list-wrapper#more-disk-div div.more-disk {
-  background: #f8f8f8d0;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -188,19 +182,19 @@ body div.list-wrapper#more-disk-div div.more-disk a:hover {
   background-color: #339999;
   box-shadow: 0 0 5px #99cc99;
 }
-body div.list-wrapper#head-div div.list-header-container {
-  margin-top: 1rem;
-}
+body div.list-wrapper#head-om-div div.list-header-container div.readme p,
 body div.list-wrapper#head-div div.list-header-container div.readme p {
   font-size: large;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  margin: 5px 0;
+  color: #333;
 }
 body div.list-wrapper#list-div {
   background-color: rgba(245, 245, 245, 0.3);
   border-radius: 5px;
   border: solid 5px rgba(137, 43, 226, 0.3);
-  margin-top: 1rem;
   font-size: 1.5rem;
+  margin: 5px 0;
 }
 body div.list-wrapper#list-div:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
@@ -220,13 +214,15 @@ body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon {
   color: #339999;
   width: 20px;
   height: 20px;
-  background-color: #ddd;
+  background-color: #eee;
   border-radius: 50%;
   border: solid 2px #339999;
+  transition: 0.4s;
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link ion-icon:hover {
   background-color: #fff;
   box-shadow: 0 0 5px #339999;
+  transform: scale(1.15) rotate(450deg);
 }
 body div.list-wrapper#list-div div.list-header-container h3.table-header {
   font-size: 1.5rem;
@@ -307,6 +303,9 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(73, 90, 47, 0.4);
 }
+body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th a:hover {
+  cursor: n-resize;
+}
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td {
   padding: 1rem;
@@ -324,6 +323,7 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type a:not([onclick]):hover {
   color: #339999;
   text-decoration: underline;
+  cursor: pointer;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:first-of-type > ion-icon,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:first-of-type > ion-icon {
@@ -333,11 +333,13 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:nth-of-type(2) {
   justify-content: flex-end;
   text-align: right;
+  cursor: default;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th:last-of-type,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td:last-of-type {
   justify-content: flex-end;
   text-align: right;
+  cursor: default;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr th li,
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr td li {
@@ -374,14 +376,14 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   color: #339999;
   text-decoration: none;
 }
-body div.list-wrapper#list-div div.list-body-container div#upload_div center {
+body div.list-wrapper#list-div div.list-body-container div#upload_div div {
   margin-top: 5px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-body div.list-wrapper#list-div div.list-body-container div#upload_div center select,
-body div.list-wrapper#list-div div.list-body-container div#upload_div center input {
+body div.list-wrapper#list-div div.list-body-container div#upload_div div select,
+body div.list-wrapper#list-div div.list-body-container div#upload_div div input {
   font-size: 1.2rem;
   vertical-align: middle;
   padding: 0.5rem;
@@ -390,8 +392,8 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div center inp
   border-radius: 4px;
   background-color: gainsboro;
 }
-body div.list-wrapper#list-div div.list-body-container div#upload_div center select:hover,
-body div.list-wrapper#list-div div.list-body-container div#upload_div center input:hover {
+body div.list-wrapper#list-div div.list-body-container div#upload_div div select:hover,
+body div.list-wrapper#list-div div.list-body-container div#upload_div div input:hover {
   box-shadow: 0 0 10px #696969;
   background-color: #e9e9e9;
   cursor: pointer;
@@ -406,11 +408,11 @@ body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4
   padding: 5px;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type textarea:hover {
-  border: solid 2px #666;
+  border: solid 2px #777;
   box-shadow: 0 0 10px #696969;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type textarea:focus {
-  outline-color: #999;
+  outline-color: rgba(251, 251, 251, 0);
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type a {
   text-decoration: none;
@@ -470,17 +472,29 @@ body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody t
   box-shadow: 0 0 10px #696969;
   background-color: #fff;
 }
+body div.list-wrapper#foot-om-div,
 body div.list-wrapper#readme-div {
   background-color: rgba(245, 245, 245, 0.3);
   width: 100%;
-  margin: 2rem auto 0;
+  margin: 15px auto 0;
   border-radius: 3px;
   border: solid 5px rgba(137, 43, 226, 0.3);
   box-sizing: border-box;
 }
+body div.list-wrapper#foot-om-div div.markdown-body,
 body div.list-wrapper#readme-div div.markdown-body {
   padding: 5px;
 }
+body div.list-wrapper#foot-om-div:hover,
 body div.list-wrapper#readme-div:hover {
   box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
+}
+body div.list-wrapper#foot-om-div {
+  margin-top: 20px;
+}
+body > div[style="color: rgba(247,247,249,0);"] {
+  margin-top: 1rem;
+  flex: 1 0;
+  display: flex;
+  align-items: flex-end;
 }

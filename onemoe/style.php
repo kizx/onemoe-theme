@@ -1,2 +1,0 @@
-<?php include 'onemoe.min.css';?>
-body{<?php if (getConfig('background')) { ?>background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center;background-image:url("<?php echo getConfig('background'); ?>");<?php } ?>}

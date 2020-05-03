@@ -15,14 +15,6 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  // 利用时间撑开页面
-  > div[style="color: rgba(247,247,249,0);"] {
-    margin-top: 4rem;
-    flex: 1 0;
-    display: flex;
-    align-items: flex-end;
-  }
-
   @import "head.less"; //顶部
   @import "pop.less"; //弹出菜单
 
@@ -54,13 +46,15 @@ body {
   @import "disk.less"; // 多盘
 
   // head.md
+  div.list-wrapper#head-om-div,
   div.list-wrapper#head-div {
     div.list-header-container {
-      margin-top: 1rem;
       div.readme {
         p {
           font-size: large;
-          padding: 0 2rem;
+          padding: 0 1rem;
+          margin: 5px 0;
+          color: #333;
         }
       }
     }
@@ -71,8 +65,8 @@ body {
     background-color: rgba(245, 245, 245, 0.3);
     border-radius: 5px;
     border: solid 5px rgba(137, 43, 226, 0.3);
-    margin-top: 1rem;
     font-size: 1.5rem;
+    margin: 5px 0;
     &:hover {
       box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
     }
@@ -82,10 +76,11 @@ body {
   }
 
   // 底部readme
+  div.list-wrapper#foot-om-div,
   div.list-wrapper#readme-div {
     background-color: rgba(245, 245, 245, 0.3);
     width: 100%;
-    margin: 2rem auto 0;
+    margin: 15px auto 0;
     border-radius: 3px;
     border: solid 5px rgba(137, 43, 226, 0.3);
     box-sizing: border-box;
@@ -95,5 +90,16 @@ body {
     &:hover {
       box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
     }
+  }
+  div.list-wrapper#foot-om-div {
+    margin-top: 20px;
+  }
+
+  // 利用时间撑开页面
+  > div[style="color: rgba(247,247,249,0);"] {
+    margin-top: 1rem;
+    flex: 1 0;
+    display: flex;
+    align-items: flex-end;
   }
 }
