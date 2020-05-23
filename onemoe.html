@@ -21,9 +21,9 @@
     <meta name=viewport content="width=device-width,initial-scale=1">
     <meta name="keywords" content="<!--Keywords-->">
     <meta name="description" content="<!--Description-->">
-    <link rel="icon" href="<!--base_disk_path-->favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="<!--base_disk_path-->favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://www.2bboy.com/usr/uploads/onemoe.min.css" type="text/css" />
+    <link rel="icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<!--base_path-->favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kizx/onemoe-theme/onemoe.min.css" type="text/css" />
     <!--BackgroundStart-->
     <style>
         body {
@@ -41,7 +41,7 @@
             "color: #fff; margin: 1em 0; padding: 5px 0; background: #673ab7;",
             "margin: 1em 0; padding: 5px 0; background: #efefef;");
     }
-    </script>    
+    </script>
     <!--customCss-->
 </head>
 
@@ -194,6 +194,7 @@
                             <a onclick="sortby('a');"><!--constStr@File--></a>
 <!--ShowThumbnailsStart-->
                             &nbsp;&nbsp;&nbsp;
+                            <label><input type="checkbox" id="originalpic"><!--constStr@OriginalPic--></label>
                             <button onclick="showthumbnails(this);"><!--constStr@ShowThumbnails--></button>
 <!--ShowThumbnailsEnd-->
                             &nbsp;
@@ -218,7 +219,7 @@
                             </li>
 <!--AdminEnd-->
                             <ion-icon name="folder"></ion-icon>
-                            <a id="file_a<!--filenum-->" name="filelist" href="<!--FileEncodeReplaceUrl-->/"><!--FileEncodeReplaceName--></a>
+                            <a id="file_a<!--filenum-->" name="folderlist" href="<!--FileEncodeReplaceUrl-->/"><!--FileEncodeReplaceName--></a>
                         </td>
                         <td class="updated_at" id="folder_time<!--filenum-->"><!--lastModifiedDateTime--></td>
                         <td class="size" id="folder_size<!--filenum-->"><!--size--></td>
@@ -604,29 +605,37 @@
 <!--ReadmemdEnd-->
 <!--ShowThumbnailsStart-->
     function showthumbnails(obj) {
+        images = [<!--ImgExts-->];
         var files=document.getElementsByName('filelist');
         for ($i=0;$i<files.length;$i++) {
             str=files[$i].innerText;
             if (str.substr(-1)==' ') str=str.substr(0,str.length-1);
-            if (!str) return;
+            if (!str) continue;
             strarry=str.split('.');
             ext=strarry[strarry.length-1].toLowerCase();
-            images = [<!--ImgExts-->];
-            if (images.indexOf(ext)>-1) get_thumbnails_url(str, files[$i]);
+            if (images.indexOf(ext)>-1) {
+                if (document.getElementById('originalpic').checked==true) {
+                    var url=files[$i].href;
+                    url=url.substr(0,url.length-8);
+                    files[$i].parentNode.parentNode.innerHTML='<td colspan="3"><img src="'+url+'" alt="'+str+'" onload="if (this.offsetWidth>document.getElementById(\'list-div\').offsetWidth) this.style.width=\'100%\';"></td>';
+                    $i--;
+                } else {
+                    var nurl=window.location.href;
+                    if (nurl.substr(-1)!="/") nurl+="/";
+                    var url=nurl+str+'?thumbnails';
+                    get_thumbnails_url(url, str, files[$i]);
+                }
+            }
         }
         obj.disabled='disabled';
     }
-    function get_thumbnails_url(str, filea) {
-        if (!str) return;
-        var nurl=window.location.href;
-        if (nurl.substr(-1)!="/") nurl+="/";
+    function get_thumbnails_url(url, name, filea) {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", nurl+str+'?thumbnails', true);
-                //xhr.setRequestHeader('x-requested-with','XMLHttpRequest');
+        xhr.open("GET", url, true);
         xhr.send('');
         xhr.onload = function(e){
             if (xhr.status==200) {
-                if (xhr.responseText!='') filea.innerHTML='<img src="'+xhr.responseText+'" alt="'+str+'">';
+                if (xhr.responseText!='') filea.innerHTML='<img src="'+xhr.responseText+'" alt="'+name+'">';
             } else console.log(xhr.status+'\n'+xhr.responseText);
         }
     }
@@ -875,19 +884,19 @@
                         reader.readAsArrayBuffer(blob);
                     }
                     readblob(asize);
-<!--LoginStart-->
+<!--GuestStart-->
                     var spark = new SparkMD5.ArrayBuffer();
-<!--LoginEnd-->
+<!--GuestEnd-->
                     reader.onload = function(e){
                         var binary = this.result;
-<!--LoginStart-->
+<!--GuestStart-->
                         spark.append(binary);
                         if (asize < newstartsize) {
                             asize += chunksize;
                             readblob(asize);
                             return;
                         }
-<!--LoginEnd-->
+<!--GuestEnd-->
                         var xhr = new XMLHttpRequest();
                         xhr.open("PUT", url, true);
                         //xhr.setRequestHeader('x-requested-with','XMLHttpRequest');
@@ -914,7 +923,7 @@
                                 xhr3.onload = function(e){
                                     console.log(xhr3.responseText+','+xhr3.status);
                                 }
-<!--LoginStart-->
+<!--GuestStart-->
                                 var filemd5 = spark.end();
                                 var xhr4 = new XMLHttpRequest();
                                 xhr4.open("GET", '?action=uploaded_rename&filename='+encodeURIComponent((file.webkitRelativePath||file.name))+'&filemd5='+filemd5);
@@ -939,7 +948,7 @@
                                     document.getElementById('upfile_a1_'+tdnum).href = filename;
                                     document.getElementById('upfile_cpbt_'+tdnum).style.display = "";
                                 }
-<!--LoginEnd-->
+<!--GuestEnd-->
                                 EndTime=new Date();
                                 MiddleStr = '<!--constStr@EndAt-->:'+EndTime.toLocaleString()+'<br>';
                                 if (newstartsize==0) {
@@ -947,10 +956,11 @@
                                 } else {
                                     MiddleStr += '<!--constStr@ThisTime--><!--constStr@AverageSpeed-->:'+size_format((totalsize-newstartsize)*1000/(EndTime.getTime()-StartTime.getTime()))+'/s<br>';
                                 }
-                                document.getElementById('upfile_td1_'+tdnum).innerHTML='<div style="color:green"><a href="<!--base_disk_path-->'+response.name+'?preview" id="upfile_a_'+tdnum+'" target="_blank">'+document.getElementById('upfile_td1_'+tdnum).innerHTML+'</a><br><a href="<!--base_disk_path-->'+response.name+'" id="upfile_a1_'+tdnum+'"></a><!--constStr@UploadComplete--><button onclick="CopyAllDownloadUrl(\'#upfile_a1_'+tdnum+'\');" id="upfile_cpbt_'+tdnum+'" <!--AdminStart--> style="display:none"<!--AdminEnd--> ><!--constStr@CopyUrl--></button></div>';
+                                document.getElementById('upfile_td1_'+tdnum).innerHTML='<div style="color:green"><a href="<!--base_disk_path--><!--Path-->'+(file.webkitRelativePath||response.name)+'?preview" id="upfile_a_'+tdnum+'" target="_blank">'+document.getElementById('upfile_td1_'+tdnum).innerHTML+'</a><br><a href="<!--base_disk_path--><!--Path-->'+(file.webkitRelativePath||response.name)+'" id="upfile_a1_'+tdnum+'"></a><!--constStr@UploadComplete--><button onclick="CopyAllDownloadUrl(\'#upfile_a1_'+tdnum+'\');" id="upfile_cpbt_'+tdnum+'" <!--AdminStart--> style="display:none"<!--AdminEnd--> ><!--constStr@CopyUrl--></button></div>';
                                 label.innerHTML=StartStr+MiddleStr;
                                 uploadbuttonshow();
 <!--AdminStart-->
+                                response.name=file.webkitRelativePath||response.name;
                                 addelement(response);
 <!--AdminEnd-->
                             } else {
@@ -1071,7 +1081,7 @@
         var td1=document.createElement('td');
         td1.setAttribute('class','file');
         var a1=document.createElement('a');
-        a1.href='<!--base_disk_path-->'+html.name.replace(/#/,'%23');
+        a1.href='<!--base_disk_path--><!--Path-->'+html.name.replace(/#/,'%23');
         a1.innerText=html.name;
         a1.target='_blank';
         var td2=document.createElement('td');
