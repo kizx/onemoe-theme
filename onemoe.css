@@ -293,7 +293,6 @@ body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr
   margin-top: 0;
 }
 body div.list-wrapper#list-div div.list-body-container table.list-table tbody tr:not(:first-of-type) {
-  height: 40px;
   box-sizing: border-box;
   transition: 0.2s;
   border: solid 1px #339999;
