@@ -6,7 +6,9 @@
 
 - OneManager 程序已内置本主题，后台启用 onemoe 主题即可。
 
-- 本主题可以自定义背景渐近色，在后台 customCss 添加类似下面的代码即可，代码中的渐近色可以自行替换。
+- 主题可以显示背景或者渐变色背景，要显示渐变色背景需要在后台先清除背景图片设置项。
+
+- 可以自定义背景渐近色，在后台 customCss 添加类似下面的代码即可，代码中的渐近色可以自行替换。
 
 ```css
 <style>
@@ -24,21 +26,21 @@ body {
 - 隐藏语言选项和全部下载按钮的方法：在 customCss 中添加以下内容。
 
 ```css
-<style >
+<style>
 .file button {
   display: none;
 }
 .changelanguage {
   display: none;
 }
-</style >
+</style>
 ```
 
 - 更多细节请访问 [我的博客](https://www.2bboy.com/archives/154.html)。
 
 ## 预览
 
-> [在线预览](https://pan.2bboy.com/Public)
+- [**在线预览**](https://pan.2bboy.com/Public)
 
 ![](./preview/screen1.png)
 
