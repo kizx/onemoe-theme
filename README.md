@@ -4,9 +4,13 @@
 
 ## 使用
 
-- OneManager 程序已内置本主题，后台启用 onemoe 主题即可。
+- OneManager 程序已内置本主题，后台启用 onemoe 主题即可，或者可以通过设置 customTheme 链接来使用最新版本。
 
-- 主题可以显示图片背景或者渐变色背景，要显示渐变色背景需要在后台先清除背景图片设置，否则优先显示图片背景。
+```html
+https://cdn.jsdelivr.net/gh/kizx/onemoe-theme/onemoe.html
+```
+
+- 主题可以显示图片背景或者渐变色背景，要显示渐变色背景需要在后台清除背景图片设置，否则优先显示图片背景。
 
 - 可以自定义背景渐近色，在后台 customCss 添加类似下面的代码即可，代码中的渐近色可以自行替换。只要你会点 css，主题中的任何颜色都可以通过该设置来改变。
 
@@ -44,7 +48,3 @@ body {
 ![](./preview/screen4.png)
 
 ![](./preview/phone2.png)
-
-```
-
-```

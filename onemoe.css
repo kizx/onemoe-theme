@@ -453,6 +453,9 @@ body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4
 body div.list-wrapper#list-div div.list-body-container form#nextpageform {
   margin: 0 10px 10px;
 }
+body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody {
+  empty-cells: hide;
+}
 body div.list-wrapper#list-div div.list-body-container form#nextpageform tbody tr td.updated_at {
   padding: 0 10px;
 }
