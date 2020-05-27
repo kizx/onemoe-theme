@@ -401,7 +401,10 @@ body div.list-wrapper#list-div div.list-body-container div#upload_div div input:
 }
 body div.list-wrapper#list-div div.list-body-container div#upload_div div select,
 body div.list-wrapper#list-div div.list-body-container div#upload_div div input#upload_submit {
-  height: 36px;
+  height: 35px;
+}
+body div.list-wrapper#list-div div.list-body-container div#upload_div div input#upload_file {
+  height: 22px;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type {
   display: flex;
@@ -443,6 +446,7 @@ body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] img {
   width: 100%;
 }
+body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] #pdf-c1,
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] #txt {
   width: 100%;
 }
@@ -510,4 +514,17 @@ body > div[style="color: rgba(247,247,249,0);"] {
   flex: 1 0;
   display: flex;
   align-items: flex-end;
+}
+body select[name="theme"] {
+  border: solid 2px dimgrey;
+  border-radius: 4px;
+  background-color: gainsboro;
+  min-height: 25px;
+  max-width: 110px;
+  cursor: pointer;
+  font-size: 13px;
+}
+body select[name="theme"]:hover {
+  box-shadow: 0 0 10px #696969;
+  background-color: #e9e9e9;
 }

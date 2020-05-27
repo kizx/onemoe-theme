@@ -105,4 +105,19 @@ body {
     display: flex;
     align-items: flex-end;
   }
+  select[name="theme"] {
+    // -moz-appearance: none;
+    // -webkit-appearance: none;
+    border: solid 2px dimgrey;
+    border-radius: 4px;
+    background-color: gainsboro;
+    min-height: 25px;
+    max-width: 110px;
+    cursor: pointer;
+    font-size: 13px;
+    &:hover {
+      box-shadow: 0 0 10px #696969;
+      background-color: #e9e9e9;
+    }
+  }
 }
