@@ -12,11 +12,14 @@ https://cdn.jsdelivr.net/gh/kizx/onemoe-theme/onemoe.html
 
 - 主题可以显示图片背景或者渐变色背景，要显示渐变色背景需要在后台清除背景图片设置，否则优先显示图片背景。
 
-- 可以自定义背景渐近色，在后台 customCss 添加类似下面的代码即可，代码中的渐近色可以自行替换。只要你会点 css，主题中的任何颜色都可以通过该设置来改变。
+- 可以自定义背景渐近色，在后台 customCss 添加类似下面的代码即可，代码中的渐近色可以自行替换。  
+  ps：只要你会点 css，主题中的任何颜色都可以通过该设置来改变。
 
 ```css
 /* 简单点的像下面这样 */
 <style>body{background-image: linear-gradient(to right, #868f96 0%, #596164 100%);}</style>
+/* 或者这样 */
+<style>body{background-color: #8ec5fc;background-image: linear-gradient(65deg, #8ec5fc 0%, #e0c3fc 100%);}</style>
 /* 复杂点的像下面这样 */
 <style>
 body {
