@@ -16,7 +16,7 @@ https://cdn.jsdelivr.net/gh/kizx/onemoe-theme/onemoe.html
 
 ```css
 /* 简单点的像下面这样 */
-<style>background-image: linear-gradient(to right, #868f96 0%, #596164 100%);</style>
+<style>body{background-image: linear-gradient(to right, #868f96 0%, #596164 100%);}</style>
 /* 复杂点的像下面这样 */
 <style>
 body {
@@ -27,8 +27,8 @@ body {
 ```
 
 > 什么？你不会渐近色代码？放心，我也不会，只需要从类似下面的一些渐近色配色网站 copy css 然后粘贴过来即可。  
-> 配色网站 1：https://www.grabient.com/
-> 配色网站 2：https://gradient.shapefactory.co/
+> 配色网站 1：https://www.grabient.com/  
+> 配色网站 2：https://gradient.shapefactory.co/  
 > 配色网站 3：https://webgradients.com/
 
 - 更多细节请访问 [我的博客](https://www.2bboy.com/archives/154.html)。
