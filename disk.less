@@ -2,6 +2,7 @@
 div.list-wrapper#more-disk-div {
   margin: auto;
   margin: 5px auto;
+
   div.more-disk {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
@@ -10,9 +11,11 @@ div.list-wrapper#more-disk-div {
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
+
     &:hover {
       box-shadow: 0 0 5px @color-bt;
     }
+
     a {
       text-decoration: none;
       font-weight: bold;
@@ -24,11 +27,13 @@ div.list-wrapper#more-disk-div {
       box-sizing: border-box;
       height: 32px;
     }
+
     a[now] {
       color: @color-bt;
-      background-color: #dbc3fc;
+      background-color: @color-bg;
       border-bottom: solid 3px @color-bt;
     }
+
     a:hover {
       color: #fff;
       background-color: @color-bt;

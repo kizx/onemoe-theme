@@ -3,9 +3,8 @@
   font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
 }
 body {
-  background: #dfe6e9;
-  background: -webkit-linear-gradient(to left, #e9e4f0, #dfe6e9);
-  background: linear-gradient(to left, #e9e4f0, #dfe6e9);
+  background: #E0EAFC;
+  background-image: linear-gradient(0deg, #CFDEF3, #E0EAFC);
   min-height: 100vh;
   margin: auto;
   padding: 0 0.5rem;
@@ -176,7 +175,7 @@ body div.list-wrapper#more-disk-div div.more-disk a {
 }
 body div.list-wrapper#more-disk-div div.more-disk a[now] {
   color: #339999;
-  background-color: #dbc3fc;
+  background-color: rgba(199, 226, 249, 0.6);
   border-bottom: solid 3px #339999;
 }
 body div.list-wrapper#more-disk-div div.more-disk a:hover {
@@ -194,19 +193,18 @@ body div.list-wrapper#head-div div.list-header-container div.readme p {
 body div.list-wrapper#list-div {
   background-color: rgba(245, 245, 245, 0.3);
   border-radius: 5px;
-  border: solid 5px rgba(137, 43, 226, 0.3);
+  border: solid 5px rgba(92, 105, 221, 0.5);
   font-size: 1.5rem;
   margin: 5px 0;
 }
 body div.list-wrapper#list-div:hover {
-  box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
+  box-shadow: 0 0 10px rgba(79, 93, 179, 0.3);
 }
 body div.list-wrapper#list-div div.list-header-container {
-  border-radius: 2px;
   border-bottom: dashed 1px rgba(59, 66, 107, 0.3);
   display: flex;
   align-items: center;
-  background-color: #e0c3fc98;
+  background-color: rgba(199, 226, 249, 0.6);
 }
 body div.list-wrapper#list-div div.list-header-container a.back-link {
   margin-left: 1rem;
@@ -496,7 +494,7 @@ body div.list-wrapper#readme-div {
   width: 100%;
   margin: 15px auto 0;
   border-radius: 3px;
-  border: solid 5px rgba(137, 43, 226, 0.3);
+  border: solid 5px rgba(92, 105, 221, 0.5);
   box-sizing: border-box;
 }
 body div.list-wrapper#foot-om-div div.markdown-body,
@@ -505,7 +503,7 @@ body div.list-wrapper#readme-div div.markdown-body {
 }
 body div.list-wrapper#foot-om-div:hover,
 body div.list-wrapper#readme-div:hover {
-  box-shadow: 0 0 10px rgba(137, 43, 226, 0.25);
+  box-shadow: 0 0 10px rgba(79, 93, 179, 0.3);
 }
 body div.list-wrapper#foot-om-div {
   margin-top: 20px;

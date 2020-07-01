@@ -1,13 +1,14 @@
 // out:false
 // 文件路径
 div.list-header-container {
-  border-radius: 2px;
   border-bottom: dashed 1px rgba(59, 66, 107, 0.3);
   display: flex;
   align-items: center;
-  background-color: #e0c3fc98;
+  background-color: @color-bg;
+
   a.back-link {
     margin-left: 1rem;
+
     ion-icon {
       margin-top: 2px;
       color: @color-bt;
@@ -17,6 +18,7 @@ div.list-header-container {
       border-radius: 50%;
       border: solid 2px @color-bt;
       transition: 0.4s;
+
       &:hover {
         background-color: #fff;
         box-shadow: 0 0 5px @color-bt;
@@ -24,15 +26,18 @@ div.list-header-container {
       }
     }
   }
+
   h3.table-header {
     font-size: 1.5rem;
     margin: 10px;
     color: @color-bt;
     word-break: break-all;
     color: #666;
+
     a {
       color: @color-bt;
       text-decoration: none;
+
       &:hover {
         color: darkcyan;
         text-decoration: underline;
