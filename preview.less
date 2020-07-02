@@ -1,20 +1,24 @@
 // out:false
 div[style="margin: 12px 4px 4px; text-align: center"] {
-  > div:first-of-type {
+  >div:first-of-type {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     textarea {
       border: #999 solid 2px;
       padding: 5px;
+
       &:hover {
         border: solid 2px #777;
         box-shadow: 0 0 10px rgb(105, 105, 105);
       }
+
       &:focus {
         outline-color: rgba(251, 251, 251, 0);
       }
     }
+
     a {
       text-decoration: none;
       font-size: 1.6rem;
@@ -24,22 +28,26 @@ div[style="margin: 12px 4px 4px; text-align: center"] {
       border: solid 2px dimgrey;
       background-color: gainsboro;
       color: #333;
-      border-radius: 2px;
+      border-radius: 1.6rem;
       transition: 0.2s;
+
       &:hover {
         border: solid 2px #666;
         box-shadow: 0 0 10px rgb(105, 105, 105);
         background-color: rgb(243, 243, 243);
         text-decoration: none;
       }
+
       .hydrated {
         display: none;
       }
     }
   }
+
   img {
     width: 100%;
   }
+
   #pdf-c1,
   #txt {
     width: 100%;

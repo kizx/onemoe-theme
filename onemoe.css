@@ -430,7 +430,7 @@ body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4
   border: solid 2px dimgrey;
   background-color: gainsboro;
   color: #333;
-  border-radius: 2px;
+  border-radius: 1.6rem;
   transition: 0.2s;
 }
 body div.list-wrapper#list-div div.list-body-container div[style="margin: 12px 4px 4px; text-align: center"] > div:first-of-type a:hover {
