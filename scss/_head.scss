@@ -1,31 +1,36 @@
-// out:false
 // 语言
 div#top-div {
   display: flex;
   height: 25px;
+
   select.changelanguage {
     border: solid 1px rgb(150, 150, 150);
     border-radius: 2px;
     margin-left: auto;
   }
 }
+
 // 管理菜单
 a.login,
 li.operate {
   font-size: 1.2rem;
-  color: @color-bt;
+  color: $color-bt;
   position: relative;
   list-style: none;
   width: 5rem;
+
   &:hover {
     cursor: pointer;
   }
+
   ion-icon {
     vertical-align: middle;
   }
+
   &:hover ul {
     display: flex;
   }
+
   ul {
     width: 2rem;
     list-style-type: none;
@@ -33,6 +38,7 @@ li.operate {
     position: absolute;
     margin-top: 0;
     top: 0;
+
     li {
       display: flex;
       padding: 0.2rem;
@@ -40,14 +46,17 @@ li.operate {
       border-radius: 2px;
       background-color: papayawhip;
       border: dashed 1px yellowgreen;
+
       &:hover {
         background-color: #fff;
       }
+
       a {
         margin-left: 0.8rem;
         width: 1.7rem;
-        color: @color-bt;
+        color: $color-bt;
         text-decoration: none;
+
         &:hover {
           cursor: pointer;
         }

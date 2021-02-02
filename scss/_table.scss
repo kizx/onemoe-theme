@@ -1,62 +1,72 @@
-// out:false
 div.list-body-container {
   table.list-table {
     margin: auto;
     min-width: 100%;
+
     tbody {
       tr {
         color: #333;
         margin: 0.6rem;
-        border: solid 1px @color-bt;
+        border: solid 1px $color-bt;
         border-radius: 4px;
         display: grid;
         grid-template-columns: 6fr 2fr 1fr;
+
         @media screen and(max-width:768px) {
           grid-template-columns: 6fr 2fr;
+
           th:nth-last-of-type(2),
           td:nth-last-of-type(2) {
             display: none;
           }
         }
+
         @media screen and(orientation:portrait) {
           grid-template-columns: 1fr;
+
           th:last-of-type,
           td:last-of-type {
             display: none;
           }
         }
+
         // 表头
         &:first-of-type {
           border: none;
           background: rgba(0, 0, 0, 0);
           margin: -2px 1.5rem;
+
           // 下载全部
           button {
             // display: none;
-            color: @color-bt;
+            color: $color-bt;
             font-size: 1.2rem;
             margin-left: 1rem;
             padding: 0.3rem 0.8rem;
-            border: solid 2px @color-bt;
+            border: solid 2px $color-bt;
             border-radius: 1.2rem;
             background: rgba(255, 255, 255, 0.25);
+
             &:hover {
-              box-shadow: 0 0 5px @color-bt;
+              box-shadow: 0 0 5px $color-bt;
               cursor: pointer;
               background-color: #f2f5fa;
             }
           }
         }
+
         &:nth-of-type(2) {
           margin-top: 0;
         }
+
         // 文件列表
         &:not(:first-of-type) {
           // height: 40px;
           box-sizing: border-box;
           transition: 0.2s;
-          border: solid 1px @color-bt;
+          border: solid 1px $color-bt;
           background-color: rgba(255, 255, 255, 0.7);
+
           &:hover {
             // border-width: 2px;
             background-color: rgba(255, 255, 255, 0.3);
@@ -64,9 +74,11 @@ div.list-body-container {
             box-shadow: 0 5px 10px rgba(73, 90, 47, 0.4);
           }
         }
+
         th a:hover {
           cursor: n-resize;
         }
+
         th,
         td {
           padding: 1rem;
@@ -74,55 +86,67 @@ div.list-body-container {
           display: flex;
           white-space: nowrap;
           overflow: hidden;
+
           &:first-of-type {
             a {
               color: #333;
               margin-left: 0.5rem;
+
               &:not([onclick]):hover {
-                color: @color-bt;
+                color: $color-bt;
                 text-decoration: underline;
                 cursor: pointer;
               }
             }
-            > ion-icon {
+
+            >ion-icon {
               color: #333;
             }
           }
+
           &:nth-of-type(2) {
             justify-content: flex-end;
             text-align: right;
             cursor: default;
           }
+
           &:last-of-type {
             justify-content: flex-end;
             text-align: right;
             cursor: default;
           }
+
           li {
             list-style: none;
           }
+
           a {
             text-decoration: none;
             overflow: hidden;
             text-overflow: ellipsis;
           }
+
           // 文件管理
           li.operate {
             display: flex;
             align-items: center;
+
             // margin-right: -2rem;
             ul {
               top: -0.7rem;
               left: 1rem;
+
               li {
                 padding: 0.5rem;
                 font-size: 1.3rem;
+
                 a {
                   width: auto;
                   padding-right: 0.8rem;
                 }
+
                 &:hover a {
-                  color: @color-bt;
+                  color: $color-bt;
                   text-decoration: none;
                 }
               }
@@ -132,6 +156,7 @@ div.list-body-container {
       }
     }
   }
+
   // 上传按钮
   div#upload_div {
     div {
@@ -140,6 +165,7 @@ div.list-body-container {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+
       select,
       input {
         font-size: 1.2rem;
@@ -150,33 +176,39 @@ div.list-body-container {
         border: solid 2px dimgrey;
         border-radius: 4px;
         background-color: gainsboro;
+
         &:hover {
           box-shadow: 0 0 10px rgb(105, 105, 105);
           background-color: rgb(233, 233, 233);
           cursor: pointer;
         }
       }
+
       select,
       input#upload_submit {
         height: 35px;
       }
+
       input#upload_file {
         height: 22px;
       }
     }
   }
 
-  @import "preview.less"; // 预览页面
+  @import "preview"; // 预览页面
 
   // 翻页
   form#nextpageform {
     margin: 0 10px 10px;
+
     tbody {
       empty-cells: hide;
+
       tr {
         td {
           &.updated_at {
             padding: 0 10px;
+
             font,
             a {
               padding: 0 5px;
@@ -184,22 +216,25 @@ div.list-body-container {
               border-radius: 4px;
               background-color: gainsboro;
               color: #333;
+
               &[color],
               &:hover {
                 cursor: pointer;
-                color: @color-bt;
+                color: $color-bt;
                 background-color: #fff;
               }
             }
           }
+
           &:first-of-type,
           &:last-of-type {
             border: solid 2px dimgrey;
             border-radius: 4px;
             background-color: gainsboro;
             color: #333;
+
             &:hover {
-              color: @color-bt;
+              color: $color-bt;
               cursor: pointer;
               box-shadow: 0 0 10px rgb(105, 105, 105);
               background-color: #fff;
