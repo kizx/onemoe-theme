@@ -21,7 +21,7 @@ div.list-body-container {
           }
         }
 
-        @media screen and(orientation:portrait) {
+        @media screen and(max-width:375px) {
           grid-template-columns: 1fr;
 
           th:last-of-type,
@@ -99,7 +99,7 @@ div.list-body-container {
               }
             }
 
-            >ion-icon {
+            > ion-icon {
               color: #333;
             }
           }
