@@ -44,8 +44,6 @@ body {
 
 ![](./preview/phone1.png)
 
-![](./preview/screen2.png)
-
 ![](./preview/screen3.png)
 
 ![](./preview/screen4.png)
